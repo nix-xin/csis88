@@ -5,12 +5,10 @@ Creation-Date: 2020-01-29T04:15:17-08:00
 ====== 1.2 Taking Notes ======
 
 ===== Installing Zim With A One-Click Git Push =====
-
 Zim is an awesome lightweight "desktop wiki" that can be used as a multi-purpose documentation tool. I've been using it these past several months and have found it to be my tool of choice for documenting and web publishing. What I've done it set it up in a way that I can easily type, save, and back up my work to my Git repository. So, the very first thing I want to share with you is how to take good notes through out this class.
 **About Zim** - https://zim-wiki.org/manual/About.html
 
 ==== Install Zim ====
-
 It is preferable that you install it on either your Host Operating System or on your Kali Linu VM setup. I'll leave that up to you. Here's a link to Zim's download page OR you can easily install it from Kali Linux, just by typing this command in a terminal.
 **Download Zim** - https://zim-wiki.org/downloads.html
 
@@ -23,7 +21,6 @@ root@kali# apt install zim
 
 
 ==== Install Git ====
-
 I borrowed this excellent tutorial from kbroman.org. I found the process to be really easy to follow in getting started with Git.
 Try it out for yourself.
 Link for reference - https://kbroman.org/github_tutorial/pages/first_time.html
@@ -80,13 +77,11 @@ not provide shell access.
 The tutorial continues with example git commands [[https://kbroman.org/github_tutorial/pages/routine.html|here.]] You can check it out a little later.
 
 ==== Create Your Repository on Github ====
-
 Login to your Github accunt and create a Repository. Be sure to name it "**csis88**".
 You can decide wether to make it public or private, but you will have to share it with me and your classmates. Which is the 
 whole point on team collaboration.
 
 ==== A New Repo from an Existing Project ====
-
 Say you’ve got an existing project that you want to start tracking with git.
 Go into the directory containing the project.
 	Type git init.
@@ -96,7 +91,6 @@ Go into the directory containing the project.
 
 
 ==== Connect it to Github ====
-
 You’ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the following.
 
 	Go to github.
@@ -114,7 +108,6 @@ root@kali# git push -u origin master
 Reference link: https://kbroman.org/github_tutorial/pages/init.html
 
 ==== Set Up Zim With A Custom Tool ====
-
 At this point, you have your Github account, repo, and ssh keys "password-less" login working. Now, let's create a simple button that will allows us to push any changes to our Zim notebook for csis88.
 
 Open Zim and click on **Edit -> Preferences -> Plugins**
@@ -139,9 +132,3 @@ If you see any weird errors while you are following the Git proocedures above. C
 https://github.community/t5/How-to-use-Git-and-GitHub/How-to-deal-with-quot-refusing-to-merge-unrelated-histories-quot/td-p/12619
 
 If not, Google is your friend.
-
-
-
-
-
-
