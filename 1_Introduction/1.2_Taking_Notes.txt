@@ -1,0 +1,90 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-29T04:15:17-08:00
+
+====== 1.2 Taking Notes ======
+
+===== Installing Zim With A One-Click Git Push =====
+
+Zim is an awesome lightweight "desktop wiki" that can be used as a multi-purpose documentation tool. I've been using it these past several months and have found it to be my tool of choice for documenting and web publishing. What I've done it set it up in a way that I can easily type, save, and back up my work to my Git repository. So, the very first thing I want to share with you is how to take good notes through out this class.
+**About Zim** - https://zim-wiki.org/manual/About.html
+
+==== Install Zim ====
+
+It is preferable that you install it on either your Host Operating System or on your Kali Linu VM setup. I'll leave that up to you. Here's a link to Zim's download page OR you can easily install it from Kali Linux, just by typing this command in a terminal.
+**Download Zim** - https://zim-wiki.org/downloads.html
+
+**Install from Kali**
+First open a terminal window from the left menu bar and type these commands.
+{{{code: lang="sh" linenumbers="True"
+root@kali# apt update
+root@kali# apt install zim
+}}}
+
+
+==== Install Git ====
+
+I borrowed this excellent tutorial from kbroman.org. I found the process to be really easy to follow in getting started with Git.
+Try it out for yourself.
+Link for reference - https://kbroman.org/github_tutorial/pages/first_time.html
+
+If you’ve never used git or github before, there are a bunch of things that you need to do. It’s very well explained on github, but repeated here for completeness.
+
+	1. Get a github account. https://github.com/
+	2. Download and install git.
+	3. Set up git with your user name and email.
+
+Open a terminal/shell and type:
+{{{code: lang="sh" linenumbers="True"
+root@kali# apt install git
+root@kali# git config --global user.name "Your name here"
+root@kali# git config --global user.email "your_email@example.com"
+root@kali# git config --global color.ui true
+}}}
+
+
+Set up ssh on your computer. I like [[http://www.biostat.jhsph.edu/~rpeng|Roger Peng’s]] guide to [[http://www.biostat.jhsph.edu/bit/nopassword.html|setting up password-less logins]]. Also see [[https://help.github.com/articles/generating-ssh-keys|github’s guide to generating SSH keys]].
+
+Look to see if you have files ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub.
+If not, create such public/private keys: Open a terminal/shell and type:
+{{{code: lang="sh" linenumbers="True"
+root@kali# ssh-keygen -t rsa -C "your_email@example.com"
+}}}
+
+
+Copy your public key (the contents of the newly-created id_rsa.pub file) into your clipboard. On a Mac, in the terminal/shell, type:
+{{{code: lang="sh" linenumbers="True"
+root@kali# pbcopy < ~/.ssh/id_rsa.pub
+}}}
+
+
+Paste your ssh public key into your github account settings.
+
+	Go to your github Account Settings
+	Click “SSH Keys” on the left.
+	Click “Add SSH Key” on the right.
+	Add a label (like “My laptop”) and paste the public key into the big text box.
+
+In a terminal/shell, type the following to test it:
+{{{code: lang="sh" linenumbers="True"
+root@kali# ssh -T git@github.com
+}}}
+
+If it says something like the following, it worked:
+{{{code: lang="sh" linenumbers="True"
+Hi username! Youve successfully authenticated, but Github does
+not provide shell access.
+}}}
+
+
+The tutorial continues with example git commands [[https://kbroman.org/github_tutorial/pages/routine.html|here.]] You can check it out a little later.
+
+==== Create Your Repository on Github ====
+
+Login to your Github accunt and create a Repository. Be sure to name it "**csis88**".
+You can decide wether to make it public or private, but you will have to share it with me and your classmates. Which is the 
+whole point on team collaboration.
+
+==== Set Up Zim With A Custom Tool ====
+
+
