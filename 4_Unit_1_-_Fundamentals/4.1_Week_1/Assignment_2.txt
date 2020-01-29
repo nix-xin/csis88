@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T20:30:59-08:00
+
+====== Assignment 2 ======
+
+===== Kali Linux Fundamentals =====
+
+==== Overview ====
+	This free course provided by Offensive Security will help prepare you in becoming proficient on navigating the Kali Linux OS. Its a great start for those that are serious about getting certified and beginning a career in Cyber Security.
+
+
+==== Prerequisites ====
+	Register a free account with Kali Training. https://kali.training/
+
+
+==== References ====
+	https://kali.training/downloads/Kali-Linux-Revealed-1st-edition.pdf
+
+
+==== TODO ====
+	To help prepare you for what lies ahead in this course, begin by learning the Kali Linux basics. Once you've created an account with Kali Training, complete the following sections in their free Kali Revealed training course.
+	
+		ABOUT KALI LINUX
+		GETTING STARTED WITH KALI
+		LINUX FUNDAMENTALS
+		INSTALLING KALI LINUX
+
+	When your’re done submit a screenshot of your Course Status to Canvas in .png format. Please contact me if you have any issues with this assignment.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138744
+

@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T18:35:27-08:00
+
+===== Home CSIS88 - Security Practices =====
+
+===== CSIS88: Security Practices Penetration Testing and Discovery =====
+v2020.SP Rolling Release
+
+Release Notes
+
+	1-27-2020: Initial install and deployment.
+
+Luciano Avendano, CISSP
+Prepared for Monterey Peninsula College, Monterey, Ca.

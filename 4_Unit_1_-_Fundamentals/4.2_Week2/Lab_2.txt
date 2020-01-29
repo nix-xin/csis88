@@ -1,0 +1,35 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T21:26:49-08:00
+
+====== Lab 2 ======
+
+===== Self Signed Certificate =====
+
+==== Overview ====
+	SSL/TLS makes use of what is known as asymmetric cryptography, commonly referred to as public key cryptography (PKI). With public key cryptography, two keys are created, one public, one private. Anything encrypted with either key can only be decrypted with its corresponding key. Thus, if a message or data stream were encrypted with the server's private key, it can be decrypted only using its corresponding public key, ensuring that the data only could have come from the server.
+
+
+==== Problem ====
+	Normal web traffic is sent unencrypted over the Internet (port 80). That is, anyone with access to the right tools can snoop all of that traffic. Obviously, this can lead to problems, especially where security and privacy is necessary, such as in credit card data and bank transactions.
+
+	Openssl – Is a cryptography toolkit implementing SSL and TLS network protocols and related cryptography standards required by them.
+
+
+==== Requirements ====
+1. Your Laptop.
+2. OpenSSL is installed on Kali, verify by typing openssl using your Terminal. If not, run the following command from your Terminal:
+{{./screenshot_2020-01-26-215153.png}}
+
+==== TODO ====
+1. Generate a Private Key: We need to create an RSA private key. This is a 1024 bit RSA key which is encrypted using Triple-DES and stored in a PEM format.
+{{./screenshot_2020-01-26-215340.png}}
+2. Generate a CSR (Certificate Signing Request): Once the private key is generated, the CSR is sent to the CA who will verify the identity of the requester. However, in our case we are going to Self Sign it because we trust in our own identity. During this process, you will be prompted for several pieces of information. These are the X.509 attributes of the certificate.
+{{./screenshot_2020-01-26-215430.png}}
+3. Generating a Self-Signed Certificate: At this point you will need to generate a self-signed certificate because you either don't plan on having your certificate signed by a CA, or you wish to test your new SSL implementation while the CA is signing your certificate. This temporary certificate will generate an error in the client browser to the effect that the signing certificate authority is unknown and not trusted.
+{{./screenshot_2020-01-26-215545.png}}
+4. Checking our Certificate: Lets ensure that our certificate was generated correctly. We can use the many useful tools that Openssl provides
+{{./screenshot_2020-01-26-215643.png}}
+5. Save your Certificate, we will come back and use it in a future lab.
+6. Send me an encrypted Email using Mailvelope with the output of the previous command.
+7. Once I receive your email, you will get credit for this lab.

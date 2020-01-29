@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T20:31:51-08:00
+
+====== Lab 1 ======
+
+===== NDG Metasploit Framework Fundamentals =====
+
+==== Overview ====
+	Metasploit is a penetration testing framework that is used for conducting security assessments. The lab introduces its fundamental usage and available options to conduct a penetration test.
+
+
+==== Objectives ====
+	In this lab, you will be conducting ethical hacking practices using various tools. You will be performing the following tasks:
+
+		Getting Familiar with Metasploit
+		Vulnerability Scanning Using the WMAP Module
+		Configuring Exploits and Payloads
+
+
+==== TODO ====
+		Access NDG Labs at: https://openlab.bayict.cabrillo.edu
+		Use the Login information provided to you by the instructor.
+		Download the Content PDF file provided in the Lab and follow the instructions.
+		This lab should take you approximately 45 minutes.
+		
+		You’re done! Submit your work to Canvas in .txt or .pdf format.
+		**Submission Link**
+		https://mpc.instructure.com/courses/12188/assignments/138746
+

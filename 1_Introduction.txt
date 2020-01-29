@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T18:45:55-08:00
+
+====== 1 Introduction ======
+
+===== Welcome to CSIS 88: Security Practices - Penetration Testing and Discovery =====
+	This course guide will be your official guide for the remainder of the course. I have conveniently placed all the required lectures, assignments, and labs into one single electronic document.
+
+	Jump right to the Syllabus to get an overview of the class requirements and schedule. Or start reading the Weekly Lectures and get a head start.
+
+	Visit the Course Web Site on MPC's Canvas application:
+
+	**MPC Canvas**
+	[[https://mpc.instructure.com/courses/12188|The Official Course Website]]
+
+	**Email Me**
+	Feel free to send me an email with any questions or concerns: lavendano@mpc.edu
+
+	**CSIS88 - Slack**
+	Let's chat! https://csis-mpc.slack.com/
+
+	**Software Install**
+	Software Installation: [[../3_Software_Installation.html|Installing Kali Linux, in a variety of ways]].
+
+
+
+
+
+
+"The quieter you become, the more you are able to hear." - Offensive Security
+
+

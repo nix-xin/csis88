@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T20:31:23-08:00
+
+====== Assignment 3 ======
+
+===== Metasploit Fundamentals =====
+
+==== Overview ====
+	Metasploit is a penetration testing framework that is used for conducting security assessments.
+
+
+==== Prerequisites ====
+	None.
+
+
+==== References ====
+	https://www.offensive-security.com/metasploit-unleashed/
+
+
+==== TODO ====
+	To help prepare you for what lies ahead in this course, begin by understanding the Metasploit framework. Read the following sections in their free Metasploit Framework Unleashed training course.
+	
+		MSFCONSOLE
+		EXPLOITS
+		PAYLOADS
+		METERPRETER
+
+	When you’re done upload a screenshot  Course Status to Canvas in .png format. Please contact me if you have any issues with this assignment.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138745
+

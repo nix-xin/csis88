@@ -1,0 +1,67 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T19:37:58-08:00
+
+====== 3 Software Installation ======
+
+===== Getting Started with Installing Kali 2018.4 =====
+	Throughout this course we will be exploring many open source tools, and a few closed source tools as well. The idea is to get familiar and comfortable with many of the tools hackers use to find and exploit vulnerabilities.
+
+	Kali Linux is our Operating System of choice for security auditing and pentesting. It contains hundreds of tools, utilities, applications, and frameworks to help us on our journey to become Ethical Hackers. The OS is developed and maintained as an Open Source project by Offensive Security (www.offensive-security.com).
+
+	There are a number of ways to install Kali Linux on your Home PC, Laptop, or Mac OS X (if you're into that sort of thing). It all really depends on your technical skills and preference in how you decide on installing it. You can also find a ton or articles and forums online that cover these topics. My instructions below, are in no way meant to be a comprehensive list. When in doubt, Google out!
+
+	I'll run through a few use cases in how you might decide to set up your Kali Linux System.
+	
+
+===== Windows =====
+	VM Ware Player and Oracle Virtual Box (Free Software)
+
+	If you are running Windows, and you prefer to stay on Windows, then your best option is to download and install VMware Workstation Player OR Oracle Virtual Box.
+
+		[[https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html|Download VM Ware Player for Windows]]
+		[[https://www.virtualbox.org/wiki/Downloads|Download Oracle Virtual Box for Windows]]
+
+	Once you download and install your virtualization software, you can download Kali Linux VMWare or Virtual Box Images. These images are ready to play and no further installation is needed.
+
+		[[https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/|Kali VM Ware Images (64bit or 32 bit)]]
+		[[https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/|Virtual Box Images (64bit or 32bit)]]
+
+	
+
+===== Dual Booting Operating Systems =====
+	This option is probably the most optimal because you install the operating system on your computer's physical hardware. Therefore, taking advantage of your hardware's specifications and do not need to share the resources with the Host OS using the VM option.
+
+	This options requires some technical knowledge and a little patience because not all hardware is built the same and therefore may require some "hacking" to get your system in order. Linux and Open Source has come a long way now and developers have really improved the usability and installation process.
+
+	Here are a couple of links to get you started on this process.
+
+		[[https://docs.kali.org/installation/dual-boot-kali-with-windows|Dual Boot Kali with Windows]]
+		[[https://techlog360.com/how-to-dual-boot-kali-linux-v2-0-with-windows-10/|Dual Boot Kali Linux v2018.2 With Windows 10]]
+
+	
+
+===== Mac OS =====
+	VM Ware Fusion and Oracle Virtual Box
+
+	If you are a Mac OS X user, you can download (you may have to pay after the trial period) VM Ware Fusion. Or if you prefer to not pay, Oracle Virtual Box is also available for Mac.
+
+		[[https://www.vmware.com/products/fusion.html|VM Ware Fusion]]
+		[[https://www.virtualbox.org/wiki/Downloads|Oracle Virtual Box]]
+
+	Unpack the DMG files and install them accordingly. Once you've install either virtualization software packages, you can now download the Kali Linux VM images.
+
+		[[https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/|Kali VM Ware Images (64bit or 32 bit)]]
+		[[https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-image-download/|Virtual Box Images (64bit or 32bit)]]
+
+	Dual Booting Operating Systems On Mac
+
+		[[https://docs.kali.org/installation/kali-linux-dual-boot-on-mac-hardware|Dual Boot Kali on Mac Hardware]]
+
+
+===== Linux =====
+	If you are a Linux user, then you may already be familiar with installing other variants of the Linux Operating system. As Kali is just another "flavor" of Linux, a very flavorful one indeed, you have a variety of choices in what and how to install this distribution.
+
+	However, keep in mind that no matter which option you choose, you want to keep performance and usability in mind. Having an up to date laptop or desktop with hardware specifications that are intended for Gaming platforms, like NVIDIA Graphics, will surely output the best performance for Cracking password hashes.
+
+	[[https://docs.kali.org/general-use/install-nvidia-drivers-on-kali-linux|Installing NVIDIA Drivers on Kali Linux]]

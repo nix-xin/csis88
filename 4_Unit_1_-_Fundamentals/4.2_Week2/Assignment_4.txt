@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T21:20:23-08:00
+
+====== Assignment 4 ======
+
+===== Creating a Rogue Server Cert =====
+
+==== Overview ====
+	Collisions for hashing algorithms have been more of a theoretical threat, but computing power that could find collisions is getting closer to being a reality.
+
+
+==== Prerequisites ====
+	None for this assignment.
+
+
+==== References ====
+	Cryptography Part1
+
+
+==== TODO ====
+	Using a web browser, navigate to http://www.phreedom.org/research/rogue-ca/
+	Read the paragraphs summarizing the researchers findings. Click the Slides from the 25c3 presentation link and download the PowerPoint presentation, which you use to answer the following questions:
+
+	The researchers collected 30,000 Web site certificates in 2008. How many were signed with MD5?
+
+	What kind of hardware was used to generate the chosen-prefix collision? How much money did the researchers spend on certificates?
+
+	What was the impact of generating a rogue CA certificate? What would this certificate allow someone with malicious intentions to do?
+
+	Which hashing algorithm were CAs forced to use after their signing method was demonstrated as not secure?
+
+	According to the researchers, what’s the only way you can effect change and secure the Internet? What URL can be used to examine the forged certificate?
+
+	You’re done! Submit your work to Canvas in .txt format.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138747
+

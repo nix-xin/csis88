@@ -1,0 +1,34 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T20:30:29-08:00
+
+====== Assignment 1 ======
+
+===== Research and Identify =====
+
+==== Overview ====
+	Recall some of the concepts we covered on the frst week of class. One of the crucial skills a professional security pentester should have, is the ability to analyze their environment by carefully studying their target. This will in turn allow you to understand the technologies and processes used by the target and adapt to their environment.
+	
+
+==== Prerequisites ====
+	None for this assignment.
+
+
+==== References ====
+	Intro to Ethical Hacking
+
+
+==== TODO ====
+	1. Research a major security breach in the last 10 years. What is the name of the company/organization that got hacked? What was the asset/data that was breached? Was it a hacker group or individual? Who? What was the vulnerability? How was the vulnerability exploited? If the technique used was not detailed in your research, how do YOU think the vulnerability was exploited? Link to your reference.
+
+	2. Identify a web site of your choice. Any web site. Peruse the links and pages provided to a typical user, study them. Look at the source code of each page by right clicking on your browser and “View Source”. Look for programmer comments or notes left by the developers. Find as many email addresses as you can fnd, any phone numbers, names of high level executives or any other employees that may have privileged access. List your information and provide a link to the website.
+
+	3. Identify a “Smart Home” appliance. For example, Amazon Echo, Wemo devices, Nest devices, etc. Name of appliance: Firmware version: Any known vulnerabilities:
+
+	4. Research RFC 2324. What protocol is this RFC for? What does the return code 418 provide?
+
+	Your’re done! Submit your work to Canvas in .txt format.
+	
+	**Submission link**
+	https://mpc.instructure.com/courses/12188/assignments/138743
+

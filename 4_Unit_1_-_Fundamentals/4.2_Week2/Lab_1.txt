@@ -1,0 +1,50 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T21:26:22-08:00
+
+====== Lab 1 ======
+
+===== Mailvelope (PGP) =====
+
+==== Overview ====
+	After learning about symmetric and asymmetric cryptography, lets put that knowledge to good use. In this simple lab you will install a Browser Addon to encrypt your email and send a test mail to the instructor.
+
+
+==== Problem ====
+	As a security professional and conscientious internet user, there are times when you need to send a message or data that should NOT be seen by prying eyes. The web has made easy enough to be able to find a solution in a few clicks. Hence, Mailvelope.
+
+
+==== Requirements ====
+	Class Computer or Your Laptop.
+	Firefox or Chrome Web Browser.
+	The instructor's Mailvelope Public Key.
+
+
+==== TODO ====
+	Using Firefox or Chrome, navigate to https://www.mailvelope.com/en/help#installation
+	 Follow the instructions in the Help page for setting up your Public and Private keys.
+
+	Once you've generated your keys, import the Instructor's public key. Read the Importing Keys section of the document. Link to Instructor's Public Key:
+	https://keys.mailvelope.com/pks/lookup?op=get&search=0x0CFBEE68A8A49CF2
+
+	Now, for the fun part. Decrypt the following messages and email the plaint text to the instructor using Mailvelope. Yes, that means that you will re-encrypt it but I should receive it in plain text.
+
+	Once I receive the email containing the message in plain text, I will give you the points for this lab.
+	
+| Message 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Guvf vf bhe jbeyq abj... gur jbeyq bs gur ryrpgeba naq gur fjvgpu, gur \nornhgl bs gur onhq.  Jr znxr hfr bs n freivpr nyernql rkvfgvat jvgubhg cnlvat\nsbe jung pbhyq or qveg-purnc vs vg jnfa'g eha ol cebsvgrrevat tyhggbaf, naq\nlbh pnyy hf pevzvanyf.  Jr rkcyber... naq lbh pnyy hf pevzvanyf.  Jr frrx\nnsgre xabjyrqtr... naq lbh pnyy hf pevzvanyf.  Jr rkvfg jvgubhg fxva pbybe,\njvgubhg angvbanyvgl, jvgubhg eryvtvbhf ovnf... naq lbh pnyy hf pevzvanyf.\nLbh ohvyq ngbzvp obzof, lbh jntr jnef, lbh zheqre, purng, naq yvr gb hf\nnaq gel gb znxr hf oryvrir vg'f sbe bhe bja tbbq, lrg jr'er gur pevzvanyf. |
+
+
+
+| Message 2                                                                                                                                                                                  |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| SXQgbWF0dGVycyBub3QgaG93IHN0cmFpdCB0aGUgZ2F0ZSwgSG\n93IGNoYXJnZWQgd2l0aCBwdW5pc2htZW50cyB0aGUgc2Nyb2xsLC\nBJIGFtIHRoZSBtYXN0ZXIgb2YgbXkgZmF0ZTogSSBhbSB0aGUgY2Fw\ndGFpbiBvZiBteSBzb3VsLg== |
+
+	
+
+| Message 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 4c 69 73 74 65 6e 2c 20 6d 61 6e 2c 20 49 20 63 6f 75 6c 64 20 68 61 \n76 65 20 63 6f 6d 65 20 69 6e 20 61 20 6d 69 6c 6c 69 6f 6e 20 77 61 \n79 73 2e 20 49 20 63 6f 75 6c 64 20 68 61 76 65 20 62 75 72 72 6f 77 \n65 64 20 75 6e 64 65 72 20 74 68 65 20 66 65 6e 63 65 73 20 61 6c 74 \n6f 67 65 74 68 65 72 2c 20 70 61 72 61 63 68 75 74 65 64 20 69 6e 2c \n20 67 6f 74 20 69 6e 20 74 68 65 20 62 61 63 6b 20 6f 66 20 61 20 74 \n72 75 63 6b 20 63 6f 6d 69 6e 67 20 69 6e e2 80 93 77 68 61 74 65 76 \n65 72 2e 20 59 6f 75 20 74 6f 6c 64 20 6d 65 20 74 6f 20 73 74 65 61 \n6c 20 79 6f 75 72 20 73 75 62 2c 20 61 6e 64 20 74 68 61 74 e2 80 99 \n73 20 77 68 61 74 20 49 20 64 69 64 2e 20 49 66 20 79 6f 75 20 77 61 \n6e 74 65 64 20 61 20 6c 69 73 74 20 6f 66 20 61 6c 6c 20 74 68 65 20 \n64 69 66 66 65 72 65 6e 74 20 77 61 79 73 20 79 6f 75 72 20 73 65 63 \n75 72 69 74 79 20 73 75 63 6b 73 2c 20 79 6f 75 20 73 68 6f 75 6c 64 \n20 68 61 76 65 20 68 69 72 65 64 20 61 6e 20 61 75 64 69 74 6f 72 e2 \n80 93 6e 6f 74 20 61 20 53 45 41 4c 20 74 65 61 6d 2e |
+
+	

@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-26T18:50:48-08:00
+
+====== 2 Goals of the Course ======
+
+===== Some Goals =====
+	My main goal is to ensure I satisfy the student objectives outlined in the Course Syllabus, that is required, per school policy. But, what then? Should that be enough for the student? I really don't think so, and I hope you do not enter this course with minimal expectations. So, here's some goals to keep in mind.
+
+	The course is designed to prepare you for the EC-Council Certified Ethical Hacker (CEH) certification.
+	I've designed it to easily integrate and satisfy the objectives of 4 other major Cyber Security certifications, if attaining one is one of your goals for the class.
+
+		CompTIA Security +
+		Offensive Security Certified Professional
+		Kali Linux Certified Professional
+		SANS GIAC Penetration Tester
+
+	Although, the CEH certification covers many MS Window's based Pen Testing tools and utilities using Graphical Interfaces, this class will teach you to be proficient using the Command Line Interface (CLI) like in all UNIX/Linux environments. Because learning the CLI should be on everyone's bucket list.
+
+	This class will focus on working in team and collaborative environments, just like in real-world scenarios. I am a strong believer that having a good attitude is usually what helps us overcome many challenging situations, even under stress. This can easily be broken down into many individual goals, i.e. Soft Skills, Leadership, Collaborative Thinking, etc.
+
+	This is not your typical "Death by PowerPoint" course. You will be expected to get on the keyboard and work. As you have probably already noticed there are 35 labs throughout the entire course. Not to mention the Proof of Concepts we will work in class.
+
+	I'll leave you with a few ideas to hopefully get you inspired and get you thinking. Overall, I hope you enjoy this course and walk away confident in your academic and professional journey. See you in class!
+
+	Luciano Avendano, CISSP
+	CSIS Instructor, MPC
+
