@@ -85,6 +85,63 @@ Login to your Github accunt and create a Repository. Be sure to name it "**csis8
 You can decide wether to make it public or private, but you will have to share it with me and your classmates. Which is the 
 whole point on team collaboration.
 
+==== A New Repo from an Existing Project ====
+
+Say you’ve got an existing project that you want to start tracking with git.
+Go into the directory containing the project.
+	Type git init.
+	Type git add to add all of the relevant files.
+	You’ll probably want to create a .gitignore file right away, to indicate all of the files you don’t want to track. Use git add .gitignore, too.
+	Type git commit.
+
+
+==== Connect it to Github ====
+
+You’ve now got a local git repository. You can use git locally, like that, if you want. But if you want the thing to have a home on github, do the following.
+
+	Go to github.
+	Log in to your account.
+	Click the new repository button in the top-right. You’ll have an option there to initialize the repository with a README file, but I don’t.
+	Click the “Create repository” button.
+
+Now, follow the second set of instructions, “Push an existing repository…”
+{{{code: lang="sh" linenumbers="True"
+root@kali# git remote add origin git@github.com:username/new_repo
+root@kali# git push -u origin master
+}}}
+
+
+Reference link: https://kbroman.org/github_tutorial/pages/init.html
+
 ==== Set Up Zim With A Custom Tool ====
+
+At this point, you have your Github account, repo, and ssh keys "password-less" login working. Now, let's create a simple button that will allows us to push any changes to our Zim notebook for csis88.
+
+Open Zim and click on **Edit -> Preferences -> Plugins**
+Make sure Version Control is checked.
+
+Click on **Tools -> Custom Tools -> Add tool by clicking the + sign**
+Name it Git Push
+Give it a good comment or description.
+The command will be:
+**/usr/bin/git push**
+Lastly, make sure the "show in toolbar" option is checked.
+
+Now test your new Custom Tool.
+Make some minor changes to your CSIS88 Notebook.
+Click on **File -> Save Version -> Add a Comment and save**
+Now, click on your **Git Push** button.
+Go to you Github page and verify your changes.
+Did it work?
+If not, retrace your steps and make sure you dont have any typos in any of your commands.
+
+If you see any weird errors while you are following the Git proocedures above. Check out this forum to see if any of the erros are similar to yours.
+https://github.community/t5/How-to-use-Git-and-GitHub/How-to-deal-with-quot-refusing-to-merge-unrelated-histories-quot/td-p/12619
+
+If not, Google is your friend.
+
+
+
+
 
 
