@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-30T23:37:55-08:00
+
+====== 4.3 Week  3 ======
+
+==== Lectures ====
+[>] TCP/IP Concepts Review
+[>] Malware
+
+==== Assignments/Labs ====
+[>] Assignment 5 - More Malware Fun
+[>] Assignment 6 - Determining Vulnerabilities for a Database Server
+[>] Lab 1 - Remote Access Trojan (RAT)
+[>] Lab 2 - NDG Backdooring with Netcat
+[>] Lab 3 - Wireshark Lab
+[>] Lab 4 - NDG Network Assessment Lab
+
+

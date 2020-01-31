@@ -1,0 +1,51 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-30T23:43:25-08:00
+
+====== Assignment 5 ======
+
+===== More Malware Fun =====
+
+==== Overview ====
+	Malware has become more and more sophisticated over the years. It has evolved into a very complex creature that can infiltrate any system connected, and in some cases not connected to the Internet. Malware authors needs to continue to beat any defensive layer if they wish to stay ahead of the game. In order to understand how to beat malware, we must first understand what it is.
+	
+	The purpose of this assignment is to increase your awareness of malware types, how to detect, deter, and delete it from systems before they infect an entire infrastructure.
+
+
+==== Prerequisites ====
+	Malware Lecture Slides
+
+
+==== References ====
+	[[https://cve.mitre.org/|Common Vulnerabilities and Exposures]]
+
+
+==== TODO ====
+	* Describe the difference between Signature Based, Behavioral Based, and Heuristic Based Virus detection. Provide an example AV software application for each.
+	* Using a web browser, navigate to https://cve.mitre.org/
+	* Research the list of CVEs below. Answer the following questions about each CVE.
+	* What is the name of the vulnerability?
+	* What is the vulnerability and how is it exploited?
+	* What category of Malware is it?
+	* How do you mitigate it?
+	* Are there any references or Proof of Concepts available? If so, include a name and link to the PoC.
+
+{{{code: lang="sh" linenumbers="True"
+
+
+Common Vulnerabilities and Exposures (CVE)
+
+    CVE-2018-4877
+    CVE-2018-6863
+    CVE-2007-4785
+    CVE-2017-0143 (For this one, what is the Microsoft Security Bulletin Number 
+                   that is used in Metasploit to reference this exploit? )
+
+
+}}}
+
+
+You’re done! Submit your work to Canvas in .txt format.
+
+**Submission Link**
+https://mpc.instructure.com/courses/12188/assignments/138751

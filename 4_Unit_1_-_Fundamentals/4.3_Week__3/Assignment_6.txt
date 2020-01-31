@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-01-30T23:43:49-08:00
+
+====== Assignment 6 ======
+
+===== Determining Vulnerabilities for a Database Server =====
+
+==== Overview ====
+	You have interviewed Ms. Jane Smith, an IT staff member, after conducting your initial security testing of the company you were hired to assess. She informs you that the company is running an older version of Oracle's database, Oracle 10g, for its personal database. You decide to research whether Oracle 10g has any known vulnerabilities that you can include in your report to Ms. Smith. You don't know whether Ms. Smith has installed any patches or software fixes; you simply want to create a report with general information.
+
+
+==== Prerequisites ====
+	None for this assignment.
+
+
+==== References ====
+	[[https://cve.mitre.org/|Common Vulnerabilities and Exposures]]
+	[[https://www.exploit-db.com/|Exploit Database by Offensive Security]]
+
+
+==== TODO ====
+	Based on the Overview information above, write a memo to Ms. Smith describing any vulnerabilities you found related to Oracle 10g. If you find vulnerabilities, your memo should include recommendations and be written in a way that doesn't generate fear or uncertainty but encourages prudent decision-making.
+	
+	You’re done! Submit your work to Canvas in .txt format.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138752
+	
