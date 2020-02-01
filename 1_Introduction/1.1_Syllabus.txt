@@ -4,6 +4,16 @@ Creation-Date: 2020-01-26T21:59:33-08:00
 
 ====== 1.1 Syllabus ======
 
+===== CSIS88: Security Practices Penetration Testing and Discovery =====
+v2020.SP Rolling Release
+
+Release Notes
+
+	1-27-2020: Initial install and deployment.
+
+Luciano Avendano, CISSP
+Prepared for Monterey Peninsula College, Monterey, Ca.
+
 ===== Click Link to Download Syllabus (pdf) =====
 [[https://mpc.instructure.com/courses/12188/files/863040/download?wrap=1|CSIS 88 - Security Practices: Penetration Testing and Discovery]] (SP20)
 
