@@ -26,7 +26,11 @@ Creation-Date: 2020-01-26T20:31:23-08:00
 		PAYLOADS
 		METERPRETER
 
-	When you’re done upload a screenshot  Course Status to Canvas in .png format. Please contact me if you have any issues with this assignment.
+	When you’re done upload a screenshot  of your Terminal after typing "**msfconsole**" to Canvas in .png format. Please contact me if you have any issues with this assignment.
+{{{code: lang="sh" linenumbers="True"
+root@kali:# msfconsole
+}}}
+	
 	
 	**Submission Link**
 	https://mpc.instructure.com/courses/12188/assignments/138745

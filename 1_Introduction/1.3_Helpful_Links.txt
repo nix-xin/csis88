@@ -1,0 +1,54 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-02T07:59:16-08:00
+
+====== 1.3 Helpful Links ======
+
+==== More on Linux ====
+	* [[http://www.pixelbeat.org/cmdline.html|Linux CommandLine Reference]]
+	* [[https://www.gnu.org/software/coreutils/manual/coreutils.html|GNU Core Utils]]
+	* [[http://www.learnshell.org/en/Welcome|Bash Online Interactive Shell]]
+	* [[http://mywiki.wooledge.org/BashGuide/|Bash Guide on Greg's Wiki]]
+	* [[http://www.linux-netbook.com/linux/timeline/|Interactive Timeline on the History of Linux]]
+	* [[http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html|Bash - All About Redirection]]
+	* [[http://www.tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf|Bash - Guide for Beginners]]
+
+==== More on Editors ====
+	* [[https://vim.rtorr.com/|Vim Cheat Sheet]]
+
+==== Movies and Documentaries ====
+	* [[https://youtu.be/jw8K460vx1c|Revolution OS (2001) - YouTube]]
+	* [[https://youtu.be/hCwjDuoJK0E|The Internet's Own Boy (2015) - YouTube]]
+	* [[https://www.youtube.com/watch?v=IpwPu_MvIUM|Wannacry - The Marcus Hutchins Story - YouTube]]
+
+==== Linux on Windows ====
+	* [[https://www.cygwin.com/|Cygwin - Get that Linux Feeling on Windows]]
+	* [[https://msdn.microsoft.com/en-us/commandline/wsl/install_guide|Bash on Ubuntu on Windows]]
+	* [[https://www.kali.org/news/kali-linux-in-the-windows-app-store/|Kali on Windows Through App Store]]
+
+==== CyberSecurity Events ====
+	* [[https://bsidessf.org/|BSides SF - Security Conference]]
+	* [[https://www.defcon.org/|DEFCON Las Vegas - Security Conference]]
+	* [[https://www.uscyberchallenge.org/|US Cyber Challenge - Competitions]]
+	* [[https://www.nationalcyberleague.org/|National Cyber League - Competitions]]
+
+==== Crypto Tools ====
+	* [[http://rumkin.com/tools/cipher/|Cipher Tools]]
+	* [[http://openwall.info/wiki/john/sample-hashes|Sample Password Hashes]]
+	* [[https://wiki.skullsecurity.org/Passwords|Password Lists - Skull Security]]
+	* [[https://thehacktoday.com/password-cracking-dictionarys-download-for-free/|Password Lists - thehacktoday]]
+	* [[https://crackstation.net/buy-crackstation-wordlist-password-cracking-dictionary.htm|Password Lists - CrackStation]]
+	* [[https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-4-creating-custom-wordlist-with-crunch-0156817/|Generating Word Lists]]
+
+==== Networking Related ====
+	* [[https://youtu.be/D3harFdPAMw?list=PLOJZfpcRYqFVjBHwqW2LCIj_SeilOrc8x|More on Ports and Protocols - YouTube]]
+
+==== Footprinting/Recon Resources ====
+	* [[https://strikersecurity.com/blog/getting-started-recon-ng-tutorial/|Intro to OSINT: Recon-NG]]
+	* [[https://www.gnu.org/software/wget/manual/wget.pdf|GNU Wget 1.18]]
+	* [[https://www.httrack.com/html/step.html|HTTrack Tutorial]]
+
+==== Port Scanning ====
+	* [[https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/|NMAP Cheat Sheet]]
+
+
