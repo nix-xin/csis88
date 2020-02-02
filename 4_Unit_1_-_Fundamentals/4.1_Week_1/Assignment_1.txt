@@ -7,7 +7,7 @@ Creation-Date: 2020-01-26T20:30:29-08:00
 ===== Research and Identify =====
 
 ==== Overview ====
-	Recall some of the concepts we covered on the frst week of class. One of the crucial skills a professional security pentester should have, is the ability to analyze their environment by carefully studying their target. This will in turn allow you to understand the technologies and processes used by the target and adapt to their environment.
+	Recall some of the concepts we covered in the frst week of class. One of the crucial skills a professional security pentester should have, is the ability to analyze their environment by carefully studying their target. This will in turn allow you to understand the technologies and processes used by the target and adapt to their environment.
 	
 
 ==== Prerequisites ====

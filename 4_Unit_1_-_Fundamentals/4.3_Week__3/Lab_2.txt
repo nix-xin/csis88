@@ -4,7 +4,6 @@ Creation-Date: 2020-01-30T23:44:25-08:00
 
 ====== Lab 2 ======
 
-===== NDG Creating and Installing Certificates =====
 
 ==== Overview ====
 

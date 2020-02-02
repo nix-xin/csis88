@@ -5,13 +5,13 @@ Creation-Date: 2020-01-26T21:16:24-08:00
 ====== 4.2 Week 2 ======
 
 ==== Lectures ====
-[>] Principles of Cryptography (Pt 1)
-[>] Principles of Cryptography (Pt 2)
+[>] [[https://drive.google.com/file/d/1rOiVRN5pNK_c-YYrsOiDxFYKnhWugxQp/view?usp=sharing|Principles of Cryptography (Pt 1)]]
+[>] [[https://drive.google.com/file/d/1Olfyfp4Rh1dEy9PCyXnqcDJqhgeWA7A0/view?usp=sharing|Principles of Cryptography (Pt 2)]]
 
 ==== Assignments/Labs ====
 [>] Assignment 4 - Creating a Rogue Server Certificate
 [>] Lab 1 - Mailvelope (PGP)
 [>] Lab 2 - Self Signed Certificate
-[>] Lab 3 - NDG Creating and Installing SSL Certificates
+[>] Lab 3 - XOR Encryption with Python
 
 

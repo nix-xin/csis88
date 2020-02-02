@@ -4,26 +4,158 @@ Creation-Date: 2020-01-26T21:27:23-08:00
 
 ====== Lab 3 ======
 
-===== NDG Creating and Installing Certificates =====
+===== XOR Encryption with Python =====
 
 ==== Overview ====
-	SSL (Secure Socket Layer) is used to secure communication between a client and web server throughout the internet. This lab demonstrates how to create a self-signed X.509 certificate and install it into a Linux web server.
+	Throughout history, encryption has been used to secure communications amongst groups of people. During WW2, the Germans used Enigma to encrypt their communications, and while their allies attempted to decrypt their messages, it wasn't until Polish mathmetician, Marian Rejewski along with other cryptanalysts reconstructed Enigma. Sharing this information with other allies, French and British military intelligence, they were eventually able to crack the Enigma code. Check out this [[https://en.wikipedia.org/wiki/Enigma_machine#Breaking_Enigma|Breaking Enigma]] article.
 
 
 ==== Objectives ====
-	In this lab, you will be conducting ethical hacking practices using various tools. You will be performing the following tasks:
-		Creating a Self-Signed Certificate
-		Configuring the Apache SSL File
-		Testing the SSL Certificate
+	In this lab, you will learn the fundamental mathematical operation used in many encryption algorithms. Exclusive OR (XOR)
+	* Understand XOR
+	* You will write some simple encyption/decryption programs in Python
+
+
+==== Prerequites ====
+	* Your Kali VM, or physical machine
+	* Python is already installed on Kali
+
+==== References ====
+	* The [[http://www.asciitable.com/|ASCII Table]]
+	* [[https://www.rapidtables.com/convert/number/binary-to-ascii.html|Binary to ASCII Converter]]
+	* Hands-On Cryptography with Python by Sam Bowne
+	* Principles of Cryptography (Lecture Slides)
+
+==== Understand XOR ====
+	XOR operates one bit at a time:
+{{{code: lang="sh" linenumbers="True"
+0 XOR 0 = 0
+0 XOR 1 = 1
+1 XOR 0 = 1
+1 XOR 1 = 0
+}}}
+	
+	For the purpose of this assignment, Python uses the **^** operator as XOR.
+	Characters are ASCII-encoded, but first translated to Binary:
+{{{code: lang="sh" linenumbers="True"
+A is 01000001
+B is 01000010
+C is 01000011
+...and so on
+}}}
+	
+	Refer to the table of ASCII characters above.
+
+	Consider A^B:
+{{{code: lang="sh" linenumbers="True"
+A is 01000001
+B is 01000010
+A^B= 00000011
+This results in 3, an unprintable end-of-text character.
+}}}
+	
+	
+	Now, consider A^s:
+{{{code: lang="sh" linenumbers="True"
+A is 01000001
+s is 01110011
+A^s= 00110010
+This results in hex value 0x32, or number 2.
+}}}
+	
+
+
+==== XOR in Python ====
+	In Kali, open a Terminal and type this command:
+{{{code: lang="sh" linenumbers="True"
+root@kali:# nano xor-1.py
+}}}
+	
+	In nano, enter the code as follows.
+{{{code: lang="python" linenumbers="True"
+#!/usr/bin/python
+
+import sys
+
+if len(sys.argv) != 4:
+  print "Usage: ./xor1 infile outfile k"
+  print "k is a one-character XOR key"
+  print "For hexadecimal keys, use $'\\x01'"
+  exit()
+
+f = open(str(sys.argv[1]), "rb")
+g = open(str(sys.argv[2]), "a")
+k = ord(sys.argv[3])
+
+try:
+    byte = f.read(1)
+    while byte != "":
+        xbyte = ord(byte) ^ k
+        g.write(chr(xbyte))
+        byte = f.read(1)
+finally:
+    f.close()
+
+g.close()
+}}}
+	
+	Save the file with **Ctrl + X**, type **Y** for yes, and **Enter**.
+	Now, make the file executable.
+	In your Terminal window, execute this command:
+{{{code: lang="sh" linenumbers="True"
+root@kali:# chmod 755 xor-1.py
+root@kali:# ./xor-1.py
+
+You should get a help message explaining how to use the program.
+}}}
+	
+	{{./screenshot_2020-02-01-185256.png}}
+	
+
+==== Encrypting a Text File ====
+	Create a file named **plaintext.txt** with the string "Hello World!"
+{{{code: lang="sh" linenumbers="True"
+root@kali:# echo -n "Hello World!" > plaintext.txt
+Now, view the contents of the file you created.
+root@kali:# cat plaintext.txt 
+}}}
+	
+	The echo -n command repeated the string "Hello World!" and redirected the output to the file plaintext.txt
+	The cat command means concatenate or view the contents of a file.
+	You can view more information on these commands and more, by typing the man command followed by any command you wish.
+	For example, **root@kali:# man cat**
+	
+	To encrypt the **plaintext.txt **file with a key of S, execute these commands:
+{{{code: lang="sh" linenumbers="True"
+root@kali:# ./xor-1.py plaintext.txt ciphertext.txt S
+Now, view the results.
+root@kali:# cat ciphertext.txt
+}}}
+	 
+	{{./screenshot_2020-02-01-192127.png}}
+	
+	Looks like an encrypted message to me.
+
+
+==== Decrypting a Text File ====
+	Now, let's reverse the process. Execute the xor-1.py script with your cipher text and **new** plaintext files and key.
+{{{code: lang="sh" linenumbers="True"
+root@kali:# ./xor-1.py ciphertext.txt plaintext-decrypted.txt S
+root@kali:# cat plaintext-decrypted.txt
+}}}
+	{{./screenshot_2020-02-01-192656.png}}	
 
 
 ==== TODO ====
-	Access NDG Labs at: https://openlab.bayict.cabrillo.edu
-	Use the Login information provided to you by the instructor.	 
-	Download the Content PDF file provided in the Lab and follow the instructions.
-	This lab should take you approximately 50 minutes.
+	Now that you understand the basics of cryptography using the XOR operator.
+	Download the **xorchallenge-1.txt **cipher message and decrypt it using the correct key. Upload your plaintext file to Canvas.
+	To download the challenge cipher  from your Terminal window, execute the command:
+{{{code: lang="sh" linenumbers="True"
+root@kali:# wget https://drive.google.com/file/d/1UPTnNJGRxiHKUjhzYwa48kZI_-ajmiUE/view?usp=sharing
+}}}
 	
-	You’re done! Submit your work to Canvas in .txt or .pdf format.
+	
+	You’re done! Submit your decrypted plaintext  to Canvas in .txt.
 	**Submission Link**
 	https://mpc.instructure.com/courses/12188/assignments/138750
 

@@ -16,7 +16,10 @@ Creation-Date: 2020-01-26T18:45:55-08:00
 
 	**Email Me**
 	Feel free to send me an email with any questions or concerns: lavendano@mpc.edu
-
+	
+	**Office Hours**
+	You can find me in BMC207 an hour before class starts.
+	
 	**CSIS88 - Slack**
 	Let's chat! https://csis-mpc.slack.com/
 
