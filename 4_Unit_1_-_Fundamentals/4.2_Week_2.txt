@@ -7,6 +7,7 @@ Creation-Date: 2020-01-26T21:16:24-08:00
 ==== Lectures ====
 [>] [[https://drive.google.com/file/d/1rOiVRN5pNK_c-YYrsOiDxFYKnhWugxQp/view?usp=sharing|Principles of Cryptography (Pt 1)]]
 [>] [[https://drive.google.com/file/d/1Olfyfp4Rh1dEy9PCyXnqcDJqhgeWA7A0/view?usp=sharing|Principles of Cryptography (Pt 2)]]
+[>] [[https://drive.google.com/file/d/1gHMZP3NzhaoExta6K8qhz5CbB4jbHjS6/view?usp=sharing|Intro to Kali Linux and Metasploit]]
 
 ==== Assignments/Labs ====
 [>] Assignment 4 - Creating a Rogue Server Certificate
