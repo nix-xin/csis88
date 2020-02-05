@@ -12,6 +12,7 @@ Creation-Date: 2020-02-02T07:59:16-08:00
 	* [[http://www.linux-netbook.com/linux/timeline/|Interactive Timeline on the History of Linux]]
 	* [[http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html|Bash - All About Redirection]]
 	* [[http://www.tldp.org/LDP/Bash-Beginners-Guide/Bash-Beginners-Guide.pdf|Bash - Guide for Beginners]]
+	* [[https://kennyvn.com/cheatsheet-useful-bash-commands-linux/|Another Linux Command Reference]]
 
 ==== More on Editors ====
 	* [[https://vim.rtorr.com/|Vim Cheat Sheet]]
