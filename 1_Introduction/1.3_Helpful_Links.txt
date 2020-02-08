@@ -40,6 +40,7 @@ Creation-Date: 2020-02-02T07:59:16-08:00
 	* [[https://thehacktoday.com/password-cracking-dictionarys-download-for-free/|Password Lists - thehacktoday]]
 	* [[https://crackstation.net/buy-crackstation-wordlist-password-cracking-dictionary.htm|Password Lists - CrackStation]]
 	* [[https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-4-creating-custom-wordlist-with-crunch-0156817/|Generating Word Lists]]
+	* [[https://www.garykessler.net/library/crypto.html|An Overview of Cryptography]]
 
 ==== Networking Related ====
 	* [[https://youtu.be/D3harFdPAMw?list=PLOJZfpcRYqFVjBHwqW2LCIj_SeilOrc8x|More on Ports and Protocols - YouTube]]
