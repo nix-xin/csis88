@@ -5,3 +5,11 @@ Creation-Date: 2020-01-26T20:13:35-08:00
 ====== 4 Unit 1 - Fundamentals ======
 
 This unit will cover information that you would typically have learned through previous university courses or work experience. The topics of interest include, Cryptography, Network Fundamentals, and an overview of Malware. 
+
+
+
+{{{code: lang="sh" linenumbers="True"
+"Curiosity is not a sin or a crime—nor is knowledge. In fact, knowledge applied ethically, 
+and with the intent of doing good, is one of the most powerful weapons we have against those 
+who mean to harm us."
+}}}

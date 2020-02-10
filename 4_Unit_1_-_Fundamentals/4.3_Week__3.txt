@@ -15,8 +15,8 @@ Creation-Date: 2020-01-30T23:37:55-08:00
 ==== Assignments/Labs ====
 [>] Assignment 5 - More Malware Fun
 [>] Assignment 6 - Determining Vulnerabilities for a Database Server
-[>] Lab 1 - Remote Access Trojan (RAT)
-[>] Lab 2 - NDG Backdooring with Netcat
-[>] Lab 3 - Wireshark Lab
+[>] Lab 1 - RAT to Reverse Shell
+[>] Lab 2 - Web Recon with Wireshark Lab
+[>] Lab 3 - NDG Backdooring with Netcat
 [>] Lab 4 - NDG Network Assessment Lab
 

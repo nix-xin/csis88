@@ -4,14 +4,22 @@ Creation-Date: 2020-01-30T23:44:12-08:00
 
 ====== Lab 1 ======
 
+===== Remote Access Trojan - Getting A Reverse Shell =====
 
 ==== Overview ====
-
+	As we discovered during our discussion on Malware, a Trojan is a program that contains malicious or harmful code inside apparently harmless programming or data in such a way that it can get control and cause damage, such as ruining the file allocation table on a hard drive. The objective of this lab is to have you create a RAT with the capability to provide you with a reverse shell so that you can gain access to a remote system.
 
 
 ==== Objectives ====
+	Create the RAT payload with msfvenom.
+	Upload the RAT via a misconfigured file server.
+	Execute the payload as an executable web page.
+	Gain a reverse shell to access the remote server.
+	
 
-
+==== References ====
+	* https://www.offensive-security.com/metasploit-unleashed/msfvenom/
+	* https://www.offensive-security.com/metasploit-unleashed/msfconsole-commands/
 
 ==== TODO ====
 

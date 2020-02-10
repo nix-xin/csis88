@@ -4,15 +4,24 @@ Creation-Date: 2020-01-30T23:45:04-08:00
 
 ====== Lab 4 ======
 
+===== NDG Lab - Network Assessment =====
 
 ==== Overview ====
-
+	The ability to capture and analyze packets is an important skill when performing a security assessment or investigating a potential network breach. This lab will demonstrate how to capture and analyze network packets.
 
 
 ==== Objectives ====
-
-
+	In this lab, you will be conducting ethical hacking practices using various tools. You will be performing the following tasks:
+	* Capturing Traffic with tcpdump
+	* Analyzing Traffic with Wireshark
+	* Analyzing Traffic with Xplico
 
 ==== TODO ====
+	Access NDG Labs at: https://openlab.bayict.cabrillo.edu
+	Use the Login information provided to you by the instructor.
+	Download the Content PDF file provided in the Lab and follow the instructions.
+	This lab should take you approximately 45 minutes.
 
+	You're done!! Submit your work to Canvas in .txt format.
+	**Submission Link**
 

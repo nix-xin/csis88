@@ -4,15 +4,42 @@ Creation-Date: 2020-01-30T23:44:25-08:00
 
 ====== Lab 2 ======
 
+===== Web Recon with Wireshark =====
 
 ==== Overview ====
-
+	After completion of our TCP/IP Review lets use the knowledge we learned about networking concepts and actually identify them using the well known Network Protocol Analyzer, Wireshark.
+	As a security professional you will be expected to analyze and dissect network traffic in any IP enabled environment. Potential for network breaches may exist or have occurred and we need to find out who, what, where, and how the breach took place.
 
 
 ==== Objectives ====
+	Analyze web traffic packets using Wireshark.
+	Identify crucial information found in the packet capture.
+	Reconstruct any user activity found in the packet capture.
+	
 
-
+==== Prerequisites ====
+	1. You could use a class PC if you have Kali installed in VMWare. I suggest using your own laptop for this lab.
+	2. Have Wireshark installed. (https://wireshark.org) NOTE: Wireshark should be installed in Kali by default.
+	3. Review TCP/IP Concepts course slides.
 
 ==== TODO ====
+	* Download the [[https://drive.google.com/file/d/1MTo76ohu3rI4fz86RAVMvTRHOfAPf3oj/view?usp=sharing|web_recon.pcap]] file to your Kali Desktop.
+	* Open the file in WireShark and answer the following questions.
 
+	1. What is the IP Address of the Web Server?
+	2. What is the MAC Address of the Client making the request to the Web Server?
+	3. In the final step of the “ 3 way handshake ” , what is the value of the Sequence number and Acknowledgment number sent to the Web Server?
+	4. What is the port number of the Web Server?
+	5. What is the port number of the client making the request?
+	6. In packet number 11, what TCP flag is set and which IP address set it?
+	7. In packet number 74, What is the name of the file that was requested by the client?
+	8. In packet number 74, What type of file was it?
+	9. What type of file was requested in packet number 87?
+	10. **EXTRA CREDIT:** What is the name of the Logo displayed on the file requested from packet 87?
+
+	You're done!! Submit your work to Canvas in .txt format.
+	**Submission Link**
+	
+	
+	
 
