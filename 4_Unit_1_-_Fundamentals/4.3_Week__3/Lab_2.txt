@@ -38,8 +38,9 @@ Creation-Date: 2020-01-30T23:44:25-08:00
 	10. **EXTRA CREDIT:** What is the name of the Logo displayed on the file requested from packet 87?
 
 	You're done!! Submit your work to Canvas in .txt format.
-	**Submission Link**
 	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138754
 	
 	
 

@@ -23,5 +23,7 @@ Creation-Date: 2020-01-30T23:44:43-08:00
 	This lab should take you approximately 45 minutes.
 	
 	You're done!! Submit your work to Canvas in .txt format.
+	
 	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138755
 
