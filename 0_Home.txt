@@ -12,3 +12,7 @@ This week we covered a lot of information. From introductory hacking/penetration
 
 ==== Week 2 (2/3) - Cryptography Fundamentals ====
 We talk about various methods and types of encryption, how it's used to conceal information and how it applies to the CIA Triad. As secure as encryption may sound, it is still vulnerable to brute force attacks and inadequate implementation. We realize that compute power is getting cheaper and may become more of a threat to encryption. Here is a link by Daniel Miessler on [[https://danielmiessler.com/study/encoding-encryption-hashing-obfuscation/|Encoding vs. Encryption vs. Hashing vs. Obfuscation]] that will help put some things into perspective going into this week.
+
+==== Week 3 (2/10) - TCP/IP Fundamentals and Malware Basics ====
+Im spending the first 30 minutes wrapping up Cryptography and then we'll dive into good ol' network fundamentals. Hopefully, we can get through everything I want to cover this week so you can start tapping the keyboard more often. I found this pretty good document on the OSI model, take a look, I think the author does a good job of using real world analogies to describe the OSI model. [[http://www.toadworld.net/Student%20Info/Archive/The%20OSI%20Model%20and%20the%20Godfather.pdf|The OSI Model as Explained by Laura Robinson]] 
+My thinking as we get into Malware is to explain the different categories and then use Metasploit to create a payload to showcase the concepts learned. I think you'll find it interesting.
