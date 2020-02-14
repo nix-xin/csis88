@@ -22,7 +22,7 @@ Creation-Date: 2020-01-30T23:44:12-08:00
 	* https://www.offensive-security.com/metasploit-unleashed/msfconsole-commands/
 
 ==== Network Diagram ====
-{{file:///media/avendanl/MintData/Documents2/CSIS88-SecurityPractices-SP20/Week3/diagrams/Lab3-RAT.png}}
+{{./screenshot_2020-02-12-182127.png}}
 
 ==== TODO ====
 
