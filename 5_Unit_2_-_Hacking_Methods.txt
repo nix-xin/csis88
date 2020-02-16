@@ -1,0 +1,10 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-15T19:13:26-08:00
+
+====== 5 Unit 2 - Hacking Methods ======
+
+A note from SANS instructor Stephen Sims (@Steph3nSims)
+
+When conducting an in-depth penetration test, we are often faced with situations that require unique or complex solutions to successfully pull off an attack, mimicking the activities of increasingly sophisticated real-world attackers. Without the skills to identify and implement those solutions, you may miss a major vulnerability or not properly assess its business impact. Target system personnel are relying on you to tell them whether an environment is secured. Attackers are almost always one step ahead and are relying on our nature to become complacent, even with regard to the very controls we worked so hard to deploy.
+

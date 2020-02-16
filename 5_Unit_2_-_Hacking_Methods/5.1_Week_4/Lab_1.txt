@@ -7,13 +7,13 @@ Creation-Date: 2020-02-15T19:58:43-08:00
 ===== (OSINT) Recon-NG =====
 
 ==== Overview ====
-	Footprinting (reconnaissance) is the very first phase in any hacking scenario. You have know your target before you attempt to attack it. In this lab, you will only be gathering information about a potential target. You will not proceed with exploiting any vulnerabilities found. That will come later in our phases
+	Footprinting (reconnaissance) is the very first phase in any penetration assessment. You have to know your target before you attempt to attack it. In this lab, you will only be gathering information about a potential target.
 	
 	You have been hired by MPC.edu to asses their website. Their CISO is concerned that there may be potential vulnerabilities that they may have over looked while building their web site. Since the information they put on their web site is public domain, it may just be information that is okay and will not damage the school. Use Recon-NG to help you footprint MPC’s web site.
 
 
 ==== References ====
-	Footprinting Slides
+	[[https://drive.google.com/file/d/1HY2iObQyHgsjieD_UBjMPCNUwMfzVbtq/view?usp=sharing|Footprinting Slides]]
 	https://www.vanimpe.eu/2015/12/22/open-source-intel-recon-ng-part-1
 
 
@@ -23,10 +23,11 @@ Creation-Date: 2020-02-15T19:58:43-08:00
 
 ==== TODO ====
 	1. Open your Terminal in Kali and type the following command and hit Enter:
-{{{code: lang="sh" linenumbers="True"
+{{{code: lang="sh" linenumbers="False"
 root@kali# recon-ng
 }}}
 	
+
 	 You should see a screen similar to the one below.
 	{{./screenshot_2020-02-15-204725.png}}
 
@@ -70,7 +71,7 @@ Do a listing of all the files in here: recon-ng downloaded multiple files that w
 
 root@kali# ls -l
 }}}
-	
+		
 
 	7. Let’s use FullContact's API Search capability to query FullContact profiles looking for MPC personnel. Take a look at this helpfull guide on creating a FullContact account and API: https://github.com/Raikia/Recon-NG-API-Key-Creation/blob/master/README-v4.8.3.md
 

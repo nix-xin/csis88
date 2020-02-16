@@ -1,0 +1,72 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-15T19:58:57-08:00
+
+====== Lab 2 ======
+
+===== Using Wget To Mirror A Web Site =====
+
+==== Overview ====
+	Footprinting (reconnaissance) is the very first phase in any penetration assessment. You have know your target before you attempt to attack it. In this lab, you will only be gathering information about a potential target. You will not proceed with exploiting any vulnerabilities found. That will come later in our phases.
+
+
+==== References ====
+	Footprinting Slides
+
+
+==== Requirements ====
+	1. Kali Linux, Wget (software is already installed in Kali)
+	2. Switch your Wireless Access Point to **HackNetInc**
+
+==== TODO ====
+	1. Make a directory in your Home path, name it sandBox and change directory to it.
+{{{code: lang="mediawiki" linenumbers="False"
+root@kali# mkdir sandBox
+root@kali# cd sandBox
+}}}
+	
+	
+	2. Edit your /etc/hosts file to include the following lines. You can use nano to edit your hosts file.
+{{{code: lang="mediawiki" linenumbers="False"
+root@kali# nano /etc/hosts
+
+172.16.1.31    www.gc.com
+}}}
+	
+	Save your file.
+	
+	3. Now, let’s copy the entire web site found at www.gc.com
+{{{code: lang="mediawiki" linenumbers="False"
+root@kali# wget --limit-rate=200k --no-clobber --convert-links --random-wait -r -p -E -e robots=off \
+-U mozilla http://www.gc.com
+}}}
+	
+
+	 Here’s a description of each of the flags used with Wget 
+{{{code: lang="mediawiki" linenumbers="False"
+--limit-rate=200k: Limit the download to 200 Kb/sec – higher download rates might seem suspicious.
+--no-clobber: don't overwrite any existing files (used in case the download is interrupted and
+resumed).
+--convert-links: convert links so that they work locally, off-line, instead of pointing to a website online.
+--random-wait: Random waits between download – same reason as for the limit-rate.
+-r: Recursive - downloads full website
+-p: downloads everything, including pictures.
+-E: gets the right extension of the file.
+-e robots=off: prevent the website from considering your session as a robot/crawler.
+-U mozilla: pretends to be just like a web-browser.
+}}}
+	
+
+	4. List the contents of your current directory. You should see all the files that you just downloaded. You can use your web browser to view the index.html file.
+{{{code: lang="mediawiki" linenumbers="False"
+root@kali# ls -l
+}}}
+	
+
+	5. Nice! You have just downloaded an entire website. But, let me tell you that you only downloaded files that are available to a typical user on the internet. This does not include scripts that are executed by the web server.
+
+	6. There is a hidden flag somewhere in the source code. Find it and submit it to the link below to get credit for this lab.
+
+	**Submission Link**
+	
+

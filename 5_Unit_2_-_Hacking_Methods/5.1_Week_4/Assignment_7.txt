@@ -13,13 +13,13 @@ Creation-Date: 2020-02-15T19:58:02-08:00
 
 
 ==== References ====
-	TCP/IP Fundamentals
+	[[https://drive.google.com/open?id=1H31lBTDIVUfHfGaLCGQZIMHz9kpZkLsI|TCP/IP Fundamentals]]
 
 
 ==== Prerequisites ====
 	1. You could use a class PC if you have Kali installed in VMWare. I suggest using your own laptop for this assignment.
 	2. Have Wireshark installed. (https://wireshark.org) NOTE: Wireshark should be installed in Kali by default.
-	3. Open the init.recon.pcap file in the Wireshark application in Kali. Answer the following questions.
+	3. Download and open the [[https://drive.google.com/file/d/1h9uj3rH8FYfk_KTqYpZBzcI23fn13JIX/view?usp=sharing|init.recon.pcap]] file in the Wireshark application in Kali. Answer the following questions.
 
 ==== TODO ====
 	1. Which IP address had port 2200 open?
