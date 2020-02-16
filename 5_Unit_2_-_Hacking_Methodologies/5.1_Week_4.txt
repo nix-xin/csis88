@@ -10,8 +10,6 @@ Creation-Date: 2020-02-15T19:17:58-08:00
 [>] Footprinting (Open Source Intenlligence)
 
 
-
-
 ==== Assignments/Labs ====
 [>] Assignment 7 - Scan and Deliver
 [>] Lab 1 - (OSINT) Recon-NG

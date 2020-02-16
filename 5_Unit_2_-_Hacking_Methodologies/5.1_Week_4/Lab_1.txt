@@ -36,8 +36,51 @@ root@kali# recon-ng
 	Now, take a look at all the information that recon-ng can store in its database. Type the following command to view the schema. NOTE: You are now working in the Workspace you created from the above command.
 	
 	3. Let’s add a new Domain to our database.
-	{{./screenshot_2020-02-15-205612.png}}
+	{{./screenshot_2020-02-15-210915.png}}
 
 	Take a look at what you entered into the database.
+	{{./screenshot_2020-02-15-210844.png}}
 	
+	4. We can add this company and a description to our companies table.
+	{{./screenshot_2020-02-15-211028.png}}
+	
+	5. Now, let’s find some interesting information about mpc.edu. We need to apply a recon-ng module and run it. How about we look for emails. The following command will give us a list of modules that can extract different domain information.
+	{{./screenshot_2020-02-15-211136.png}}
+
+	Specifically, let’s find any sub domains that are associated with mpc.edu by using Google to harvest any sites.This may be useful later. NOTE: The “show info” command gives you detailed information about a module. 
+	{{./screenshot_2020-02-15-211522.png}}
+	
+	 Did it find anything interesting? Let’s take a look at the hosts table. 
+	{{./screenshot_2020-02-15-211641.png}}
+
+	{{./screenshot_2020-02-15-211715.png}}
+
+	We're making progress!
+	
+	6. Now, let’s look for any more interesting files.
+{{{code: lang="sh" linenumbers="False"
+[recon-ng][csis88-mpc.edu] > search discovery
+[recon-ng][csis88-mpc.edu][interesting_files] > use discovery/info_disclosure/interesting_files
+
+Change Directory to  /.recon-ng/workspaces/csis88-mpc.edu
+
+root@kali# cd /.recon-ng/workspaces/csis88-mpc.edu
+
+Do a listing of all the files in here: recon-ng downloaded multiple files that we can later analyze
+
+root@kali# ls -l
+}}}
+	
+
+	7. Let’s use FullContact's API Search capability to query FullContact profiles looking for MPC personnel. Take a look at this helpfull guide on creating a FullContact account and API: https://github.com/Raikia/Recon-NG-API-Key-Creation/blob/master/README-v4.8.3.md
+
+	8. Once you created your Free account and received your API Key, copy it and add it to your workspace keys.
+	{{./screenshot_2020-02-15-212055.png}}
+
+	9. To get credit for this Lab, upload your workspace to Canvas. Follow these instructions:
+	{{./screenshot_2020-02-15-212146.png}}
+
+	10. Navigate to the Canvas Course page and find the Week 4 Lab 1 in the Assignments menu. Upload the tarball you just created from the steps above.
+
+	**Submission Link**
 
