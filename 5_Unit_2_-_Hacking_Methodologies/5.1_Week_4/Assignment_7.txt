@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-15T19:58:02-08:00
+
+====== Assignment 7 ======
+
+===== Scan and Deliver =====
+
+==== Overview ====
+	A small utility in an unnamed locale has a small SCADA test environment setup. The staff at this utility have installed a DSL line to enable remote access to this system. Unfortunately, the utility staff did not adequately consider the security implications of doing this, leaving the test environment open to attack from the internet.
+	
+	After experiencing odd behavior on this system, the lead engineer began looking at system logs and network traffic in an attempt to troubleshoot the issue. He discovered what appeared to be unauthorized access into the system. You have been called in to examine this evidence and help determine what has occurred.
+
+
+==== References ====
+	TCP/IP Fundamentals
+
+
+==== Prerequisites ====
+	1. You could use a class PC if you have Kali installed in VMWare. I suggest using your own laptop for this assignment.
+	2. Have Wireshark installed. (https://wireshark.org) NOTE: Wireshark should be installed in Kali by default.
+	3. Open the init.recon.pcap file in the Wireshark application in Kali. Answer the following questions.
+
+==== TODO ====
+	1. Which IP address had port 2200 open?
+	2. What service appears to be running on port 2200?
+	3. Which version of SSH is the server using? (Do not include the server type.)
+	4. Which version of SSH is the attacker using?
+	5. Which IP address initiated a Broadcast message to the internal network?
+	6. Which was the last IP address in that broadcast?
+	7. How many IP addresses were running a web server?
+	8. What service was 10.1.10.29 running?
+	9. What was the login banner?
+	10. Was the connection successful?
+
+	Your’re done! Submit your work to Canvas in .txt format.
+	
+	**Submission link**
+

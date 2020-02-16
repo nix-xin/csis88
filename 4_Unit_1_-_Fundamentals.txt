@@ -4,7 +4,7 @@ Creation-Date: 2020-01-26T20:13:35-08:00
 
 ====== 4 Unit 1 - Fundamentals ======
 
-This unit will cover information that you would typica have learned through previous university courses or work experience. The topics of interest include, Cryptography, Network Fundamentals, and an overview of Malware. 
+This unit will cover information that you would have learned through previous university courses or work experience. The topics of interest include, Cryptography, Network Fundamentals, and an overview of Malware. 
 
 
 

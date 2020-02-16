@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-15T19:17:58-08:00
+
+====== 5.1 Week 4 ======
+
+
+==== Lectures ====
+[>] Holiday: Washington's Birthday (2/17)
+[>] Footprinting (Open Source Intenlligence)
+
+
+
+
+==== Assignments/Labs ====
+[>] Assignment 7 - Scan and Deliver
+[>] Lab 1 - (OSINT) Recon-NG
+[>] Lab 2 - (OSINT) Wget
+[>] Lab 3 - (OSINT) Httrack
+
+
+
+

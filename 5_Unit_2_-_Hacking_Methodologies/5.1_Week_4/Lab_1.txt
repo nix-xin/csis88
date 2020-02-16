@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-15T19:58:43-08:00
+
+====== Lab 1 ======
+
+===== (OSINT) Recon-NG =====
+
+==== Overview ====
+	Footprinting (reconnaissance) is the very first phase in any hacking scenario. You have know your target before you attempt to attack it. In this lab, you will only be gathering information about a potential target. You will not proceed with exploiting any vulnerabilities found. That will come later in our phases
+	
+	You have been hired by MPC.edu to asses their website. Their CISO is concerned that there may be potential vulnerabilities that they may have over looked while building their web site. Since the information they put on their web site is public domain, it may just be information that is okay and will not damage the school. Use Recon-NG to help you footprint MPC’s web site.
+
+
+==== References ====
+	Footprinting Slides
+	https://www.vanimpe.eu/2015/12/22/open-source-intel-recon-ng-part-1
+
+
+==== Prerequisites ====
+	Kali Linux, Recon-NG (software is already installed in Kali)
+
+
+==== TODO ====
+	1. Open your Terminal in Kali and type the following command and hit Enter:
+{{{code: lang="sh" linenumbers="True"
+root@kali# recon-ng
+}}}
+	
+	 You should see a screen similar to the one below.
+	{{./screenshot_2020-02-15-204725.png}}
+
+	2. Create a new Workspace to store all the information you gather from the target system.
+	{{./screenshot_2020-02-15-205414.png}}
+
+	Now, take a look at all the information that recon-ng can store in its database. Type the following command to view the schema. NOTE: You are now working in the Workspace you created from the above command.
+	
+	3. Let’s add a new Domain to our database.
+	{{./screenshot_2020-02-15-205612.png}}
+
+	Take a look at what you entered into the database.
+	
+
