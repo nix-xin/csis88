@@ -1,0 +1,18 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-18T19:30:59-08:00
+
+====== Lab 1 ======
+
+===== Scanning =====
+
+==== Overview ====
+	In this lab, you will scan the target network from within 192.168.1.0 remote lab connection to find out what target hosts are up and what ports are open. We will be using a variety of tools (there is no need to be stealthy for this lab), including nmap, zenmap, and banner grabbing w/ netcat.
+
+
+==== Prereqs ====
+	Kali Linux, Nmap, ZenMap, Netcat (software is already installed in Kali)
+	Switch your Wireless Access Point to HackNetInc
+	
+
+==== TODO ====

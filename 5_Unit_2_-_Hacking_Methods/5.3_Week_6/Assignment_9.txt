@@ -1,0 +1,69 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-18T20:01:20-08:00
+
+====== Assignment 9 ======
+
+===== Cryptography Questions and Review =====
+
+==== Overview ====
+	Keep the concepts and terminology related to cryptographic systems fresh in your mind. These always come up when you least expect them.
+
+
+==== References ====
+	Cryptography Pt.1
+	Cryptography Pt.2
+
+
+==== TODO ====
+		1. Digital signatures are used to do which of the following?
+			a. Verify that a message was received.
+			b. Ensure that repudiation is provided.
+			c. Provide authentication and nonrepudiation
+			d. Encrypt sensitive messages.
+	
+		2. What is the standard for PKI certificates?
+			a. X.500
+			b. X.400
+			c. MySQL.409
+			d. X.509
+	
+		3. List the three MIT professors who developed the RSA algorithm.
+	
+		4. A hash value is a fixed-length string used to verify message integrity. True or False?
+	
+		5. OpenPGP is focused on protecting which of the following?
+			a. Web Content
+			b. Email messages
+			c. Database Systems
+			d. IPSec traffic
+	
+		6. Intruders can perform which kind of attack if they have possession of a company’s password hash file?
+			a. Dictionary
+			b. Scan
+			c. Ciphertext
+			d. Buffer Overflow
+	
+		7. A certification authority (CA) issues private keys to recipients. True or False?
+	
+		8. Which of the following describes a chosen-plaintext attack?
+			a . The attacker has ciphertext and algorithm.
+			b. The attacker has plaintext and algorithm.
+			c. The attacker has plaintext, ciphertext, and password file.
+			d. The attacker has plaintext, can choose what part of the text gets encrypted, and has access to the ciphertext.
+	
+		9. Two different messages producing the same hash value results in which of the following?
+			a. Duplicate key
+			b. Corrupt key
+			c. Collision
+			d. Message Digest
+	
+		10. Asymmetric cryptography systems are which of the following?
+			a. Faster than symmetric cryptography systems.
+			b. Slower than symmetric cryptography systems.
+			c. The same speed as symmetric cryptography.
+			d. Practical only on systems with multiple processors.
+	
+	You're done! Submit your answers to Canvas in .txt
+
+	**Submission Link**

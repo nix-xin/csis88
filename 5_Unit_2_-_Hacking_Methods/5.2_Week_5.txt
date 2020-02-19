@@ -6,11 +6,15 @@ Creation-Date: 2020-02-15T19:18:14-08:00
 
 
 ==== Lectures ====
-
-
+	[>] [[https://drive.google.com/file/d/1dH2E8gmLyEU5Jm-wYSdwtRYlkeZy9aGr/view?usp=sharing|Port Scanning]]
+	[>] [[https://drive.google.com/file/d/19BySWYb7rDkUvZ1-xBliG4tXiIt1dB5D/view?usp=sharing|Enumeration]]
 
 
 ==== Assignments/Labs ====
+	[>] Assignment 8 - Gathering Information on a Network's Services
+	[>] Lab 1 - Scanning
+	[>] Lab 2 - NDG Enumerating SMB with Enum4Linux
+	[>] Lab 3 - NDG Recon with Nmap and Amap
 
 
 

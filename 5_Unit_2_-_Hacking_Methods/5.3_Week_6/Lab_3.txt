@@ -1,0 +1,20 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-18T20:02:44-08:00
+
+====== Lab 3 ======
+
+===== Sniffing Traffic on Remote Hosts Using Wireshark and Tcpdump =====
+
+==== Overview ====
+	The ability to capture and analyze packets is an important skill when performing a security assessment or investigating a potential network breach. This lab will demonstrate how to capture and analyze network packets on a remote Linux host.
+
+
+==== Prereqs ====
+	* Kali Linux, Wireshark, and Tcpdump (software is already installed in Kali)
+	* Download the [[https://drive.google.com/file/d/1_gIIalOLno8Pg6ynDxfTagWUis7euSgd/view?usp=sharing|zipcracker.sh]] script. This script uses John the Ripper to brute force password protected files.
+	* Download the [[https://drive.google.com/file/d/1PpMyl8kFBRZsPklO1iLGrndcvl9oFRXf/view?usp=sharing|justwords.txt]] password file. You might need this file later in the lab.
+	* Switch your Wireless Access Point to Hackable_Networks
+
+
+==== TODO ====

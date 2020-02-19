@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-18T19:31:36-08:00
+
+====== Lab 3 ======
+
+===== Reconnaissance with Nmap and Amap (NDG Lab1) =====
+
+==== Overview ====
+	This lab introduces Nmap the “network mapper” and its usage to perform basic network port reconnaissance and scanning. Additionally, the use of the Amap “application mapper” tool in order to determine which applications are running on listening ports.
+
+
+==== Objectives ====
+	In this lab, you will be conducting ethical hacking practices using various tools. You will be performing the following tasks
+	
+		Reconnaissance Using Nmap
+		Using Amap for Reconnaissance
+	
+
+==== TODO ====
+	1. Access NDG Labs at: https://openlab.bayict.cabrillo.edu
+	2. Use the Login information provided to you by the instructor.
+	3. Download the Content PDF file provided in the Lab and follow the instructions.
+	4. This lab should take you approximately 45 minutes.
+
+	You're done! Submit your report in .txt or .pdf to Canvas.
+	
+	**Submission Link**
+

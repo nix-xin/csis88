@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-18T19:31:26-08:00
+
+====== Lab 2 ======
+
+===== Enumerating SMB With Enum4Linux (NDG Lab8) =====
+
+==== Overview ====
+	NetBIOS is a commonly attacked program on Windows machines, however, Linux servers with a SAMBA installed also use NetBIOS. This lab addresses the vulnerabilities of NetBIOS and how to exploit them.
+	
+==== Objectives ====
+	In this lab, you will be conducting ethical hacking practices using various tools. You will be performing the following tasks
+	
+		Enumerating the Samba Server with enum4linux
+		Cracking Samba Users with xHydra
+	
+==== TODO ====
+	1. Access NDG Labs at: https://openlab.bayict.cabrillo.edu
+	2. Use the Login information provided to you by the instructor.
+	3. Download the Content PDF file provided in the Lab and follow the instructions.
+	4. This lab should take you approximately 45 minutes.
+	
+	You're done! Submit your report in .txt or .pdf to Canvas.
+	
+	**Submission Link**

@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-18T19:30:35-08:00
+
+====== Assignment 8 ======
+
+===== Gathering Information on a Network's Services =====
+
+==== Overview ====
+	After conducting a zone transfer and running security tools on the HNI Network, you're asked to write a memo to the IT manager, Bob Jones, explaining which tools you used to determine the services running on his network. Mr. Jones is curious about how you gathered this information. You consult the OSSTMM and read section C on port scanning and the "Internet Technology Security" section, particularly the material on identifying services, so that you can address his concerns.
+
+
+==== References ====
+	[[http://www.isecom.org/mirror/OSSTMM.3.pdf|The Open Source Security Testing Methodology Manual]]
+
+
+==== TODO ====
+	1. Based on this information, write a one-page memo to Mr. Jones explaining the steps you took to find the information. Your memo should mention any information you found in the OSSTMM that relates to this stage of your testing.
+
+	Your’re done! Submit your work to Canvas in .txt format.
+	
+	**Submission Link**
+	
