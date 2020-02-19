@@ -4,7 +4,7 @@ Creation-Date: 2020-02-15T19:58:57-08:00
 
 ====== Lab 2 ======
 
-===== Using Wget To Mirror A Web Site =====
+===== Using Wget To Mirror A Web Site (In class lab) =====
 
 ==== Overview ====
 	Footprinting (reconnaissance) is the very first phase in any penetration assessment. You have know your target before you attempt to attack it. In this lab, you will only be gathering information about a potential target. You will not proceed with exploiting any vulnerabilities found. That will come later in our phases.
@@ -68,5 +68,5 @@ root@kali# ls -l
 	6. There is a hidden flag somewhere in the source code. Find it and submit it to the link below to get credit for this lab.
 
 	**Submission Link**
-	
+	https://mpc.instructure.com/courses/12188/assignments/138759
 

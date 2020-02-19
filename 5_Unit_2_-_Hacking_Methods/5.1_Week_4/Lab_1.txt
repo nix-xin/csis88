@@ -48,7 +48,7 @@ root@kali# recon-ng
 	5. Now, let’s find some interesting information about mpc.edu. We need to apply a recon-ng module and run it. How about we look for emails. The following command will give us a list of modules that can extract different domain information.
 	{{./screenshot_2020-02-15-211136.png}}
 
-	Specifically, let’s find any sub domains that are associated with mpc.edu by using Google to harvest any sites.This may be useful later. NOTE: The “show info” command gives you detailed information about a module. 
+	Specifically, let’s find any sub domains that are associated with mpc.edu by using Google to harvest any sites. This may be useful later. NOTE: The “show info” command gives you detailed information about a module. 
 	{{./screenshot_2020-02-15-211522.png}}
 	
 	 Did it find anything interesting? Let’s take a look at the hosts table. 
@@ -84,4 +84,5 @@ root@kali# ls -l
 	10. Navigate to the Canvas Course page and find the Week 4 Lab 1 in the Assignments menu. Upload the tarball you just created from the steps above.
 
 	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138758
 

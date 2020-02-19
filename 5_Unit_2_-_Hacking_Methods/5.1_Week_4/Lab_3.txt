@@ -4,5 +4,64 @@ Creation-Date: 2020-02-15T19:59:37-08:00
 
 ====== Lab 3 ======
 
+===== (OSINT) Maltego =====
 
+==== Overview ====
+	Footprinting (reconnaissance) is the very first phase in any penetration assessment. You have to know your target before you attempt to attack it. In this lab, you will only be gathering information about a potential target.
+	
+	You have been hired by MPC.edu to asses their website. Their CISO is concerned that there may be potential vulnerabilities that they may have over looked while building their web site. Since the information they put on their web site is public domain, it may just be information that is okay and will not damage the school. Use Maltego to help you footprint MPC’s web site.
+	
+	**About Maltego**
+	Paterva’s Maltego is a data-mining tool designed to visualize open source intelligence gathering. Maltego has both a commercial and a free community edition. The free Kali Linux version, which we’ll use in this class, limits the results it returns, but we can still use it to gather a good deal of interesting information very quickly.
+
+
+==== References ====
+	[[https://drive.google.com/file/d/1HY2iObQyHgsjieD_UBjMPCNUwMfzVbtq/view?usp=sharing|Footprinting Slides]]
+	https://medium.com/@raebaker/a-beginners-guide-to-osint-investigation-with-maltego-6b195f7245cc
+
+
+==== Prerequisites ====
+	Kali Linux, Maltego (software is already installed in Kali)
+
+
+==== TODO ====
+	1. To run **maltego**, you can simply click on the icon  {{./screenshot_2020-02-17-162219.png}}  in the left task bar on your Kali desktop or you can simply
+		type **maltego **at the command line.
+		
+	2. The Maltego GUI should launch, and you will be prompted to enter your Login credentials. You can click the Register an account link and it will take you to the Paterva website. Once you're logged in, select **Open a blank graph and let me play around**, and then click **Finish**. You should now have a windows that looks like the image below.
+	{{./screenshot_2020-02-17-164644.png}}
+
+	3. Let's add a new Transform, which is another query plugin in Maltego. Click the **Transforms** menu at the top, click the **Transform Hub, **and search for the **Have I Been Pwned?** transform.
+	Install it by clicking on the **Install** button. After you install it, click on **Investigate** menu at the top, and click on the **New Graph (1)** tab.
+
+	4. Now select the **Palette** option from the left-hand border. As you can see, we can gather information about all sorts of entities. Let’s start with the **mpc.edu** Website, as shown in the image below. Expand the Infrastructure option from the Palette (on the left of the Maltego window) and drag a **Website** entity from the Palette onto the new graph. By default, the website is www.paterva.com. To change it to **mpc.edu**, either double-click the text or change the text field at the right side of the screen.
+	{{./screenshot_2020-02-17-170411.png}}
+
+	5. Now that you have the correct Website, you can run a Transform (Maltego speak for query) on mpc.edu. Right-click and select the **To Server Technologies [Using BuiltWith] **transform.
+	You should get a graph similar to the one below. Take a look at all the Server and Client side technologies used on the mpc.edu website.
+	{{./screenshot_2020-02-17-171252.png}}
+	
+	6. Let's run another Transform. Right-click and select **Mirror: Email addresses found. ** You should now have a graph that look similar to the one below.
+	{{./screenshot_2020-02-17-171614.png}}
+	
+	It's starting to get interesting now. Look at how much information we've gather with just a few clicks.
+	
+	7. Now that we've found some email addresses, let's check to see if any have known compromises. For example, we can check to see if any of these email addresses have been used in compromised web sites. If so, its possible that we can find the passwords used on those sites and use them in any system at MPC.edu. Right-click the **jgutierrez@mpc.edu **address and select the **Get all breaches of an e-mail address [v3 @haveibeenpwned] **You should see a graph that looks similar to the one below.
+	{{./screenshot_2020-02-17-172205.png}}
+
+	Looks like that email address was used on a compromised website.
+	
+	{{./screenshot_2020-02-17-172552.png}}
+
+	We can continue collecting as much information about this entity as we feel is enough for our assessment. In this case, the password is probably hiding in another database somewhere on the internet and it would take us a while to find it.
+	
+	I think this is good enough for this Lab, and we'll stop here. Now Save your graph by clicking the **Save** button near the top left. Click on the **Import|Export** menu near the top, and Export your graph into a pdf report by clicking the **Generate Report** button.
+	
+	You're done! Submit your PDF file to the link below.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138760
+	
+	
+	
 
