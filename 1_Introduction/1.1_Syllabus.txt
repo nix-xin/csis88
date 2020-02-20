@@ -17,3 +17,5 @@ Prepared for Monterey Peninsula College, Monterey, Ca.
 ===== Click Link to Download Syllabus (pdf) =====
 [[https://drive.google.com/file/d/12oJXFcEhRRfKj2UTWL6KOvIaKe_412-y/view?usp=sharing|CSIS 88 - Security Practices: Penetration Testing and Discovery]] (SP20)
 
+===== Rules of Conduct (please review and sign) =====
+https://docs.google.com/forms/d/e/1FAIpQLSeZIfEQ2QWoRwjHQYx8kYapQCTC8P4nPrrm-W586tkT1rHPgA/viewform
