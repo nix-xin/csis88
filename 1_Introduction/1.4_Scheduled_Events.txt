@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-02-21T20:26:15-08:00
+
+====== 1.4 Scheduled Events ======
+
+
+===== CyberSecurity Conferences =====
+| Date        | Event           | Site                                                 |
+|:------------|:----------------|:-----------------------------------------------------|
+| 2/22 - 2/24 | BSides SF       | https://bsidessf.org/                                |
+| 8/6 - 8/9   | DEFCON 28       | https://www.defcon.org/                              |
+| 2020        | All Confs in CA | https://infosec-conferences.com/us-state/california/ |
+
+
+===== Year Round Hacking Events =====
+| Date        | Event                 | Site                                                   |
+|:------------|:----------------------|:-------------------------------------------------------|
+| 2/10 - 4/30 | Cyber FastTrack       | https://cyber-fasttrack.org/                           |
+| All Year    | PicoCTF               | https://picoctf.com/                                   |
+| 3/? - 4/?   | US Cyber Challenge    | https://uscc.cyberquests.org/                          |
+| All Year    | Bay Area Cyber        | https://www.baycyber.net/getting-started               |
+| 2/10 - 5/15 | National Cyber League | https://www.nationalcyberleague.org/spring-season-2020 |
+| SP20        | CSIS88@MPC            | https://ctf.offswitchsecurity.com/                     |
+| All Year    | Hack the Box          | https://www.hackthebox.eu/                             |

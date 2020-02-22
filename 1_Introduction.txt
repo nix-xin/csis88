@@ -15,7 +15,7 @@ Creation-Date: 2020-01-26T18:45:55-08:00
 	[[https://mpc.instructure.com/courses/12188|The Official Course Website]]
 
 	**Email Me**
-	Feel free to send me an email with any questions or concerns: lavendano@mpc.edu
+	Feel free to send me an email with any questions or concerns: lavendano[at]mpc[dot]edu
 	
 	**Office Hours**
 	You can find me in BMC207 an hour before class starts.
