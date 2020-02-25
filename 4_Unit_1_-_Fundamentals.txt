@@ -8,8 +8,7 @@ This unit will cover information that you would have learned through previous un
 
 
 
-{{{code: lang="sh" linenumbers="True"
-"Curiosity is not a sin or a crime—nor is knowledge. In fact, knowledge applied ethically, 
-and with the intent of doing good, is one of the most powerful weapons we have against those 
+{{{code: lang="mediawiki" linenumbers="False"
+"Curiosity is not a sin or a crime—nor is knowledge. In fact, knowledge applied ethically, and with the intent of doing good, is one of the most powerful weapons we have against those 
 who mean to harm us."
 }}}
