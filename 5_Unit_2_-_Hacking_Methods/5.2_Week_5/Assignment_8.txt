@@ -7,11 +7,11 @@ Creation-Date: 2020-02-18T19:30:35-08:00
 ===== Gathering Information on a Network's Services =====
 
 ==== Overview ====
-	After conducting a zone transfer and running security tools on the HNI Network, you're asked to write a memo to the IT manager, Bob Jones, explaining which tools you used to determine the services running on his network. Mr. Jones is curious about how you gathered this information. You consult the OSSTMM and read section C on port scanning and the "Internet Technology Security" section, particularly the material on identifying services, so that you can address his concerns.
+	After conducting a zone transfer and running security tools on the HNI Network, you're asked to write a memo to the IT manager, Bob Jones, explaining which tools you used to determine the services running on his network. Mr. Jones is curious about how you gathered this information. You consult the OSSTMM and read section Chapter 11 on "Data Networks Security Testing", particularly the material on identifying services, so that you can address his concerns.
 
 
 ==== References ====
-	[[http://www.isecom.org/mirror/OSSTMM.3.pdf|The Open Source Security Testing Methodology Manual]]
+	[[https://drive.google.com/file/d/1xyoJIwYap1mKxuni6vo2Ew0O5JPm5aS0/view?usp=sharing|The Open Source Security Testing Methodology Manual]]
 
 
 ==== TODO ====
