@@ -19,3 +19,6 @@ My thinking as we get into Malware is to explain the different categories and th
 
 ==== Week 4 (2/19) - Footprinting/Recon (OSINT) ====
 We take a break on Monday for President's day, but we get back to hacking things on Wednesday. I'll be covering the topic of Open Source Intelligence, or OSINT for short. This is our very first phase in our pentesting assessment or hacking methodology. We learn everything we can about our target or client so that our attacks are more specialized and accurate. We'll use use tools like whois, nslookup, dig for DNS recon, and Wget or Httrack to mirror a website. I'm already giving too much away...see you on Wednesday.
+
+==== Week 5 (2/24) - Port Scanning ====
+Straight from the whatismyipaddress.com website: **Port Scanning** is the name for the technique used to identify open ports and services available on a network host. It is sometimes utilized by security technicians to audit computers for vulnerabilities, however, it is also used by hackers to target victims. Yes, as the description indicates, we will be scanning for open ports this week. See you in class.
