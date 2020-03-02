@@ -7,13 +7,53 @@ Creation-Date: 2020-02-18T19:30:59-08:00
 ===== Scanning =====
 
 ==== Overview ====
-	In this lab, you will scan the target network from within 192.168.1.0 remote lab connection to find out what target hosts are up and what ports are open. We will be using a variety of tools (there is no need to be stealthy for this lab), including nmap, zenmap, and banner grabbing w/ netcat.
+	In this lab, you will scan the target network from within 172.16.5.X remote lab connection to find out what target hosts are up and what ports are open. We will be using a variety of tools (there is no need to be stealthy for this lab), including nmap, zenmap, and banner grabbing.
 
 
 ==== Prereqs ====
-	Kali Linux, Nmap, ZenMap, Netcat (software is already installed in Kali)
-	Switch your Wireless Access Point to HackNetInc
+	Review the course slides on Port Scanning (a handy [[https://drive.google.com/file/d/19bR39GVS5ZqILISSaKAp7U2_ISKGGGAn/view?usp=sharing|Nmap Cheat Sheet]] is recommended)
+	Kali Linux, Nmap, ZenMap (software is already installed in Kali)
+	Switch your Wireless Access Point to **HackNetInc.**
 	
 
 ==== TODO ====
-COMING SOON
+	1. **Ping Sweep**. Create a list of live hosts on the HNI network. The following nmap scan performs a SYN scan (-PS) and ICMP (-PE) looking for available hosts. Outputs in a grepable format with -oG.
+{{{code: lang="sh" linenumbers="False"
+nmap -sn -PS -PE --stats-every 10s 172.16.5.10-60 -oG temp.txt
+
+# Use the grepable temp.txt file to pull out the hosts that are up
+
+grep "Up" temp.txt  | cut -d" " -f2 > tmp2.txt
+mv tmp2.txt live-hosts.txt
+rm temp.txt
+}}}
+
+
+	2. **Banner Grabbing.** Now that you have a list of live hosts, perform a scan while grabbing service banners. Nmap uses -T3 for a normal speed scan (play with values 1 -5 for different performance) -sV for service version detection and -sT for TCP.
+{{{code: lang="sh" linenumbers="False"
+nmap -T3 -sV -sT -iL live-hosts.txt
+}}}
+	
+
+	3. **Agressive scanning. **Run a scan that detects the OS, service version, script scanning, trace routing. Nmap uses the -A for agressive scanning.
+{{{code: lang="sh" linenumbers="False"
+nmap -A --stats-every 10s -iL live-hosts.txt
+}}}
+	
+
+	4. **Using a GUI with Zenmap. **Turns out nmap has a graphical user interface, Zenmap. Lets use it to create a graphic of our network topology.
+	 a. Open Zenmap by navigating to **Applications** -> **01 - Information Gathering** -> **Zenmap**
+	 b. In the Target input box, enter the IP addresses in your **live-hosts.txt** list, comma seperated.  **e.g. 172.16.5.1,2,3,4,5,6**
+	 c. For the Profile, select Quick Scan and click Scan. Let it do its magic.
+	 d. When the scan completes, click the Topology tab and notice the graphic. Look at all the other intersting information in the left panes. Pretty cool, right?
+	
+	Using your Scanning skills, answer the following questions in a text document and upload to Canvas when you're complete. **NOTE:** Please use good formatting and organizational skills.
+		1. From the hosts that you scanned, which IPs had HostBased Firewalls running? (if any)
+		2. What Operating Systems were in use? List the IP addresses and their OS type and version.
+		3. What well known ports and their associated services were open? List the IPs and the services.
+		4. Which hosts were running FTP and HTTP servers and what versions?
+		5. What web applications did you find available? List the host's IP address and the name of the Web Application.
+
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138762
+
