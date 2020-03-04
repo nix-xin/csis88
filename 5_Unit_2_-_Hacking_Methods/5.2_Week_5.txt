@@ -9,6 +9,8 @@ Creation-Date: 2020-02-15T19:18:14-08:00
 	[>] [[https://drive.google.com/file/d/1dH2E8gmLyEU5Jm-wYSdwtRYlkeZy9aGr/view?usp=sharing|Port Scanning]]
 	[>] [[https://drive.google.com/file/d/19BySWYb7rDkUvZ1-xBliG4tXiIt1dB5D/view?usp=sharing|Enumeration]]
 
+==== Videos ====
+	[>] [[https://drive.google.com/file/d/1RdraWjGafq9ZU-xQi5ghwUMZRrqQFYua/view?usp=sharing|Exploiting vsFTPd 2.3.4 with Metasploit]]
 
 ==== Assignments/Labs ====
 	[>] Assignment 8 - Gathering Information on a Network's Services
