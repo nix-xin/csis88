@@ -18,4 +18,34 @@ Creation-Date: 2020-02-18T20:02:44-08:00
 
 
 ==== TODO ====
-COMING SOON
+	1. Open a Terminal and make a named pipe. Pipes allow separate processes to communicate without having been designed explicitly to work together. Read more on "pipes" at https://www.linuxjournal.com/article/2156
+{{{code: lang="sh" linenumbers="False"
+root@kali# mkfifo /tmp/remote
+}}}
+	
+
+	2. Now open Wireshark from the command line and have immediately listen on the named pipe you created.
+{{{code: lang="sh" linenumbers="False"
+root@kali# wireshark -k -i /tmp/remote
+}}}
+	
+	
+	3. Using **ssh** to execute tcpdump remotely, let's connect to the remote Linux host using a compromised account from the password hashes found in an earlier lab. Specifically, use the "**root**" account .
+{{{code: lang="sh" linenumbers="False"
+root@kali# ssh 172.16.5.32  "tcpdump -s 0 -U -n -w  -  -i eth0 not port 22" > /tmp/remote
+}}}
+	
+
+	4. Start filtering the packets in Wireshark, only looking for FTP traffic.
+
+	5. Once you notice some FTP traffic from the remote host, let Wireshark capture a few more packets and then stop capturing traffic. Save you packet capture on your Kali desktop.
+	6. Find the FTP data that the user transferred from the FTP server. You will also need the resource files in the PreReq section above to answer Q2.
+	Answer the following questions:
+	
+			1. What is the username and password that the user entered to access the FTP server?
+			2. What is the Flag value inside the data that was transferred by the user?
+	
+	7. Save your answers in a text file and upload to Canvas. i.e. week6-ftp-sniff.txt
+
+	You're done! Have an awesome week.
+	**Submission Link**
