@@ -48,4 +48,6 @@ root@kali# ssh 172.16.5.32  "tcpdump -s 0 -U -n -w  -  -i eth0 not port 22" > /t
 	7. Save your answers in a text file and upload to Canvas. i.e. week6-ftp-sniff.txt
 
 	You're done! Have an awesome week.
+	
 	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138768
