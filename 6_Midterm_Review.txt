@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-03-14T20:05:26-07:00
+
+====== 6 Midterm Review ======
+
+**Introduction to Ethical Hacking**
+	Review and Understand
+		[*] The Threat Categories
+		[*] Information Warfare
+		[*] Hacker Classes
+		[*] Hacker Phases
+		[*] Information Assurance and the CIA Triad
+		[*] Pentesting Types: Black, White, Grey Box Testing
+**Principles of Cryptography**
+	Review and Understand
+		[*] Symmetric, Asymetric, and PKI
+		[*] Encoding, Hashing, Encrypting, and Obsfucation
+**TCP/IP Concepts**
+	Review and Understand
+		[*] TCP 3 way handshake, TCP Flags
+		[*] Ports, Services, Well Known, Registered, and Dynamic
+		[*] Difference between Routers, Switches, and Proxies
+**Malware**
+	Review and Understand
+		[*] Various types of malware that can infect a system
+		[*] Difference in malware types i.e. shellvirus vs. cryptovirus
+**Tools and Techniques**
+	Review and Understand
+		[*] The Metasploit framework and Kali Linux
+		[*] The Hacker Phases: Footprint, Scan Enumerate, and System Hacking
+		[*] OSINT Tools and Techniques: passive vs active
+		[*] Scanning tools and techniques i.e. nmap, netcat
+		[*] Enumeration tools i.e. banner grabbing, smb enumeration
+		[*] Wireshark and Tcpdump for analyzing packet captures
+		[*] Password cracking using John and Hashcat
+
