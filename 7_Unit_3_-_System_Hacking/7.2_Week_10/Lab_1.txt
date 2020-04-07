@@ -1,0 +1,206 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-06T07:06:23-07:00
+
+====== Lab 1 ======
+
+
+===== CSIS 88 - Week 10 – Pentesting Web Apps (Lab 1) =====
+
+==== Overview ====
+	The objective of this lab is to introduce you to web application penetration testing.
+	
+
+==== Scenario ====
+	Through a scan of Hackable Networks Inc., an eCommerce web server was discovered. Your task is to perform a walkthrough of the server and gather information on the web application and technologies in use and identify any vulnerabilities. Using the concepts learned in class, you will utilize tools provided in Kali to perform a basic Web Application Pentest.
+
+
+==== Required Tools ====
+		1) Burp Suite (Free Edition)
+		2) OWASP ZAP
+		3) Nikto Web Vuln Scan Tool
+		4) cURL – Command Line tool for data transfer to and from a server
+		5) cEWl – Custom Word List generator
+		6) DirBuster – Directory Fuzzer and Discovery
+	
+
+==== Burp Suite ====
+	Burp Suite is a collection of tightly integrated tools that allow effective security testing of modern-day web applications. It provides a great combination of tools that allow automated and manual workflows to test, assess, and attack web applications of all shapes and sizes. Getting started with Burp is easy. With some application, we can become extremely comfortable and skilled at using the various powerful tools that are offered by Burp Suite.
+	Ref: Burp Suite Essentials 2014 Packt Publishing
+
+
+==== Configuring FireFox to Proxy Through Burp ====
+	The primary job of the Burp Suite Proxy tool is to intercept regular web traffic, which goes over Hypertext Transfer Protocol (HTTP), and with additional configuration, encrypted HTTP (HTTPS) traffic as well. All of this to make it easy for you to see all interactions and data that goes to and come from the web server. If you can see what is happening in terms of requests and responses, you can test the website security using various techniques and approaches available to you.
+	
+	With Mozilla Firefox, we can ensure that intercepting proxy configuration only sends browser-generated traffic to Burp Suite. This is one reason Firefox is preferred for the testing and security assessment of web applications. The next set of steps allows us to configure Mozilla Firefox so that it is ready for use with Burp Suite:
+		1. Start Mozilla Firefox.
+		2. Open Preferences and navigate to Advanced | Network Settings.
+		3. Select the Manual proxy configuration: 
+		4. Add localhost in the HTTP Proxy textbox and 8080 in the Port text box.
+		5. Now, all your HTTP traffic from Mozilla Firefox will go through Burp Suite.
+		6. In Kali, navigate to Applications | Web App Analysis | burpsuite
+			Accept the defaults options for the dialogue boxes.
+		7. By default, when Burp Suite starts, it starts with the intercept mode on. This means if you try to browse at this point, it would seem like nothing is happening. Behind the scenes, Burp Suite is in the interception mode and 		waiting for your input. At this point, you can either forward the request or switch off the intercept mode.
+
+
+==== Manual Mapping of Target Site ====
+	This phase allows us to find out more information about a target site. However, as the heading implies, we must manually visit the target and click on any links that are visible to a typical user.
+	**Burp - Adding a Site to our Target Site Map and Scope**
+		1. In your Browser’s Navigation bar, enter the target web site’s address.
+		2. Notice, the browser will not completely send the request to the website because Burp is currently holding on to the request.
+		   Click on the Proxy Tab | Intercept in Burp.
+		3. Click on the Forward button to allow the request to go trough.
+		4. Verify that the site was added to your Target Scope. Click the Target Tab | Site Map
+
+
+==== Automated Mapping of Target Site ====
+	This phase allows us to find out more information about a target site. Like, what the web pages link to and other interesting information that isn’t easily accessible to a regular user.
+	**Burp Spider**
+	Spidering or web crawling, as it is better known, is the process of automatically following all the links on a web page to discover both static and dynamic web resources of the web application. Burp uses the Spider tool to automate the mapping of an application.
+		1. In your Browser’s Navigation bar, enter the target web site’s address.
+		2. Notice, the browser will not completely send the request to the website because Burp is currently holding on to the request.
+		   Click on the Proxy Tab | Intercept in Burp.
+		3. Click on Action |  Send to Spider
+		4. Verify all the “Spidering” that Burp is doing in the Target Tab | Site map
+
+	**OWASP Zap Spider**
+		1. In Kali,  navigate to Applications | Web App Analysis |  owasp-zap
+		2. In the Quick Start tab, you should see a Welcome message. Somewhere further down in that window you will notice a URL to attack input box.
+		   Enter the Target web site in that box and click Attack.
+		   You will notice in the left window under Sites, your Target site is populating. Zap is running a series of automated tests to learn more information about the site.
+		3. Now let’s Spider it.
+		   Right-Click on the target site in the left window. Select Attack | Spider site
+		4. One more time, Right-Click the site and choose Attack | Ajax Spider Site
+
+
+==== Automated Discovery and Scanning ====
+	During this phase we can use some more tools to scan and look for more vulnerabilities or site directories we didn't find during our mapping phase. Since these scanners can take a long time to run, you can always set that tool aside and go work on another task.
+	
+	**Automated Scanning with Wfuzz**
+	The following command can be run to detect remote files and directories:
+	
+{{{code: lang="sh" linenumbers="False"
+	wfuzz -c -z file,wordlist/general/big.txt --hc 404 http://vulnerable/FUZZ
+}}}
+	
+	
+	The following options are used:
+	
+	-c to output with colors.
+	-z file,wordlist/general/big.txt tells wfuzz to use the file wordlists/general/big.txt as a dictionary to brute force the remote directories' name.
+	--hc 404 tells wfuzz to ignore the response if the response code is 404 (Page not Found)
+	http://vulnerable/FUZZ tells wfuzz to replace the word FUZZ in the URL by each value found in the dictionary
+	
+	**Automated Scanning with DirBuster**
+		1. Launch DirBuster by opening your Terminal and typing disrbuster at the prompt.
+		2. Update the Target URL with the target site address.
+		3. Set a wordlist to use. Click Browse and navigate to usrshare/dirbuster/directory-list-2.3-small.txt
+		4. Leave the default options selected. In file extension, enter php, html, cgi, exe, pl, py. And any other extensions you can think of.
+		5. Click Start.
+		6. Review the results, find anything interesting.
+		7. Minimize the DirBuster window.
+	
+	**Automated Scanning with ZAP**
+		1. Within ZAP Right-Click on your target site and choose Attack | Active Scan
+		2. Verify the scan is taking place in the Active scan window. 
+		3. Let the scan run and continue to the next section.
+	
+	**Automated Scanning with Nikto**
+	Nikto is yet another web vulnerability scanner. It relies on a DB of signaures that match specific web technologies. It can attempt to discover as much information about a web server and its configuration.
+	The information displayed will contain CVE, Http headers, and other interesting paths it finds.
+	
+{{{code: lang="sh" linenumbers="False"
+	nikto -host <ip_address_or_host>
+}}}
+	
+	
+	**Automated Vulnerability Scanning with Nmap**
+	Nmap is a multi-use tool, not only used for port scanning, but we can also use it as a vulnerability scanner.
+	The below nmap command will attemp to run a vulnerability scan on a host only applying the banner and http OR ssl scripts. It will ignore any brute, broadcast, dos, external, or http-slowloris scripts.
+	
+{{{code: lang="sh" linenumbers="False"
+	nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) <ip_address_or_host>
+}}}
+	
+	
+==== Testing Authentication, Authorization, and Sessions ====
+	**Fuzzing Logins with CeWL and ZAP**
+	This tool will help us create a custom word list from all the text found in your target site.
+	
+		1. Open a Terminal window and execute the following command:
+	
+{{{code: lang="sh" linenumbers="False"
+cewl http://<your target site> --depth 5 --write <sitename>.txt
+}}}
+	
+	       
+		2. Go to your ZAP window and navigate to Tools | Options select Fuzzer from the menu.
+		3. Click Select File and select the file you created with CeWL above. 
+		4. Click Ok import the file, and Ok again to close the dialogue box.
+		5. Find the Login page form found from previously scanning your Target site.
+		   It will look something like login.php, or index.php(login_form).
+		   Right-Click and select resend.
+		   Modify the request so that the user is “admin” and click Send.
+		6. Click on the History tab and select on the last entry.
+		7. In the Request pane in the top right you will notice the login parameters you entered in the request you resent.
+		8. Highlight the value for the password, and the right-click and choose “Fuzz”.
+		9. Click Payloads button | Add | File fuzzers and select the cewl file you created before. Click Add | Ok
+		10. Click Start Fuzzer.
+		11. Look through the requests until you find one that has a different response size.
+		12. If you dont find a match, go back to step 2 and add more Payloads (passwords) from the /wordlist directory in Kali.
+
+
+==== Injection Flaws ====
+	In order to understand, detect and exploit SQL injections, you need to understand the Structured Query Language (SQL). SQL allows a developer to perform the following requests:
+	* retrieve information using the **SELECT** statement;
+	* update information using the **UPDATE** statement;
+	* add new information using the **INSERT** statement;
+	* delete information using the **DELETE** statement.
+
+	If SQL injection is present in the web page, injecting a single quote ' will break the query syntax and generate an error. Furthermore, injecting 2 times a single quote '' won't break the query anymore. As a general rule, an odd number of single quotes will throw an error, an even number of single quotes won't.
+	
+	It is also possible to comment out the end of the query, so in most cases you won't get an error (depending on the query format). To comment out the end of the query you can use ' --.
+	For example the query, with an injection point in the test value:
+	
+	SELECT id,name FROM users where name='test' and id=3;
+	will become:
+	
+	SELECT id,name FROM users where name='test' -- ' and id=3;
+	and will get interpreted as:
+	
+	SELECT id,name FROM users where name='test' 
+	However this test can still generate an error if the query follows the pattern below:
+	
+	SELECT id,name FROM users where ( name='test' and id=3 );
+	Since the right parenthesis will be missing once the end of the query is commented out. You can obviously try with one or more parenthesis to find a value that doesn't create an error.
+	
+	Another way to test it, is to use ' and '1'='1, this injection is less likely to impact the query since it is less likely to break it. For example if injected in the previous query, we can see that the syntax is still correct:
+	
+	SELECT id,name FROM users where ( name='test' and '1'='1' and id=3 );
+
+	**Testing Injection Flaws**
+		1. Up this point, review all of your scanning efforts. Look through the requests that the scanners have made, find any pages that exist in the site that have forms or login pages.
+       
+		2. For Cross Site Scripting, at a minimum you can manually test by going to your browser and finding the page with inputs.
+		   Type the following in the input boxes and verify and Pop-Up dialogue boxes.
+		   a. <script>alert(1)<script>
+		   b. “><script>alert(1)</script>
+		   c. “onerror=”javascript:alert(1)
+	       
+		3. Do your inputs query information from a database? Test for SQL Injection.
+		   Look for any Errors returned back to your browser. Anything interesting?
+		   a. ‘
+		   b. ‘OR 1=1--
+		   c. ‘OR’A’=’A
+		   d. ‘)OR 1=1--
+	       
+		4. Do any inputs reference local files? Try to access other files.
+		   a. Directly reference the file location (/etc/passwd)
+		   b. Reference the file by relative links (../../../../../etc/passwd)
+		   c. Tack on additional commands. (&& ping) -t 60 -c 20 192.168.1.1
+
+
+==== Exploitation ====
+	The goal of exploitation is to take the items you found in the discovery phase and prove that a vulnerability exists. Depending on your scope of you engagement, this could be a quick PoC, or the first step to see how far down into the weeds you end up.
+	Did you find anything?
+

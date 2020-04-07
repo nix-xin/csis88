@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-06T07:06:42-07:00
+
+====== Lab 2 ======
+
+
+===== Web Security Academy - SQL injection (Lab 2) =====
+
+==== Overview ====
+	In this section, we'll explain what SQL injection is, describe some common examples, explain how to find and exploit various kinds of SQL injection vulnerabilities, and summarize how to prevent SQL injection.
+
+
+==== Objectives ====
+	There are a wide variety of SQL injection vulnerabilities, attacks, and techniques, which arise in different situations. Some common SQL injection examples include:
+	
+		Retrieving hidden data, where you can modify an SQL query to return additional results.
+		Subverting application logic, where you can change a query to interfere with the application's logic.
+		UNION attacks, where you can retrieve data from different database tables.
+		Examining the database, where you can extract information about the version and structure of the database.
+		Blind SQL injection, where the results of a query you control are not returned in the application's responses.
+
+
+==== TODO ====
+	1. Access the PortSwigger Web Security Academy: https://portswigger.net/web-security/sql-injection
+	2. Use the Login information provided when you created your account.
+	3. Work through the Lab Tasks.
+	4. After completing all tasks upload your proof of completion to Canvas using the link below.
+
+	You're done! Submit your answers to Canvas in any format.
+
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138771

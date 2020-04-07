@@ -1,0 +1,37 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-06T06:56:33-07:00
+
+====== Assignment 10 ======
+
+===== Fine Reports for Fine Security Assessments =====
+
+==== Overview ====
+	Documentation is an important part of any project. Pentesting applications or systems is no different. 
+	Your clients will want to understand at a technical level how you were able to breach their assets so they can make the necessary decisions to fix them. 
+	This assignment will focus on your writing and communication skills. 
+	
+
+==== Prerequisites ====
+	Intermediate writing and reporting skills. A modest approach to communicating ideas.
+	View this YouTube Video: [[https://www.youtube.com/watch?v=qNLMuls2BBA|Public Penetration Test Reports - Learning Resource]]
+	[[https://github.com/juliocesarfort/public-pentesting-reports|Link to more Public Pentest Reports]] 
+
+
+==== References ====
+	[[https://cure53.de/#publications|Cure53 Fine Penetration Tests For Fine Websites]]
+	[[https://cure53.de/pentest-report_surfshark.pdf|Surfshark Report]]
+
+
+==== TODO ====
+
+	1. Review the Surfshark report. Analyze the structure and format in which it is written and documented by the security company.
+	2. You are now the CEO/CISO/Security Pentester of your own Cyber Security company. Create your own company name and logo.
+	3. You will be pentesting a subnet of Hackable Networks. Write a report based on the security vulnerability findings in this weeks Web Application Pentesting - Lab 1. 
+		Remember to  jot down notes, i.e. IP addresses, tools used, vulnerabilities found, etc. Just like you've already been doing.
+	4. Remember to make informed recommendations. Not just tell the client to fix it because its vulnerable.
+	5. Ask the Instructor to review your report before you turn it in for full credit.
+
+	Submit your work to Canvas in .pdf format.
+	https://mpc.instructure.com/courses/12188/assignments/138769
+

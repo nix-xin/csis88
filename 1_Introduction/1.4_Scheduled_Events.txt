@@ -23,3 +23,17 @@ Creation-Date: 2020-02-21T20:26:15-08:00
 | 2/10 - 5/15 | National Cyber League | https://www.nationalcyberleague.org/spring-season-2020 |
 | SP20        | CSIS88@MPC            | https://ctf.offswitchsecurity.com/                     |
 | All Year    | Hack the Box          | https://www.hackthebox.eu/                             |
+
+
+===== Ethical Hacking and Cyber Security Training Platforms =====
+| Date       | Website                       | Description                            |
+|:-----------|:------------------------------|:---------------------------------------|
+| Year Round | https://pentesterlab.com      | Penetration Testing and Training       |
+| Year Round | https://portswigger.net       | Web Security Academy                   |
+| Year Round | https://education.splunk.com/ | Splunk Fundamentals Part 1             |
+| Year Round | https://tryhackme.com/        | Cyber Security Training and Educations |
+
+
+===== On Receiving Extra Credit =====
+	Attending and participating in any of the above events will award you 5 extra credit points. Proof must be given to the instructor in the form of the registration email, proof of completion, receipt or payment, etc. It must clearly show that you were in attendance or completed. 
+
