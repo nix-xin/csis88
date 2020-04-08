@@ -110,7 +110,7 @@ Creation-Date: 2020-04-06T07:06:23-07:00
 	The information displayed will contain CVE, Http headers, and other interesting paths it finds.
 	
 {{{code: lang="sh" linenumbers="False"
-	nikto -host <ip_address_or_host>
+nikto -host <ip_address_or_host>
 }}}
 	
 	
@@ -119,10 +119,11 @@ Creation-Date: 2020-04-06T07:06:23-07:00
 	The below nmap command will attemp to run a vulnerability scan on a host only applying the banner and http OR ssl scripts. It will ignore any brute, broadcast, dos, external, or http-slowloris scripts.
 	
 {{{code: lang="sh" linenumbers="False"
-	nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) <ip_address_or_host>
+nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) <ip_address_or_host>
 }}}
 	
 	
+
 ==== Testing Authentication, Authorization, and Sessions ====
 	**Fuzzing Logins with CeWL and ZAP**
 	This tool will help us create a custom word list from all the text found in your target site.
@@ -177,12 +178,35 @@ cewl http://<your target site> --depth 5 --write <sitename>.txt
 	Another way to test it, is to use ' and '1'='1, this injection is less likely to impact the query since it is less likely to break it. For example if injected in the previous query, we can see that the syntax is still correct:
 	
 	SELECT id,name FROM users where ( name='test' and '1'='1' and id=3 );
+	
+	**Examples from Web Security Academy**
+	Here, an attacker can log in as any user without a password simply by using the SQL comment sequence -- to remove the password check from the WHERE clause of the query. For example, submitting the username administrator'-- and a blank password results in the following query:
+	
+	SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
+	
+	https://insecure-website.com/products?category=Gifts'+OR+1=1--
+	
+	This results in the SQL query:
+	
+	SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
+	
+	The modified query will return all items where either the category is Gifts, or 1 is equal to 1. Since 1=1 is always true, the query will return all items.
+	
+	Another example, if an application executes the following query containing the user input "Gifts":
+	
+	SELECT name, description FROM products WHERE category = 'Gifts'
+	
+	then an attacker can submit the input:
+	
+	' UNION SELECT username, password FROM users--
+	
+	This will cause the application to return all usernames and passwords along with the names and descriptions of products.
 
 	**Testing Injection Flaws**
 		1. Up this point, review all of your scanning efforts. Look through the requests that the scanners have made, find any pages that exist in the site that have forms or login pages.
        
 		2. For Cross Site Scripting, at a minimum you can manually test by going to your browser and finding the page with inputs.
-		   Type the following in the input boxes and verify and Pop-Up dialogue boxes.
+		   Type the following in the input boxes and verify any Pop-Up dialogue boxes.
 		   a. <script>alert(1)<script>
 		   b. “><script>alert(1)</script>
 		   c. “onerror=”javascript:alert(1)
@@ -190,9 +214,10 @@ cewl http://<your target site> --depth 5 --write <sitename>.txt
 		3. Do your inputs query information from a database? Test for SQL Injection.
 		   Look for any Errors returned back to your browser. Anything interesting?
 		   a. ‘
-		   b. ‘OR 1=1--
+		   b. ‘ OR 1=1 --
 		   c. ‘OR’A’=’A
-		   d. ‘)OR 1=1--
+		   d. ‘) OR 1=1--
+		   e. admin --'
 	       
 		4. Do any inputs reference local files? Try to access other files.
 		   a. Directly reference the file location (/etc/passwd)

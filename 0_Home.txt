@@ -22,3 +22,12 @@ We take a break on Monday for President's day, but we get back to hacking things
 
 ==== Week 5 (2/24) - Port Scanning ====
 Straight from the whatismyipaddress.com website: **Port Scanning** is the name for the technique used to identify open ports and services available on a network host. It is sometimes utilized by security technicians to audit computers for vulnerabilities, however, it is also used by hackers to target victims. Yes, as the description indicates, we will be scanning for open ports this week. See you in class.
+
+==== Week 6 (3/2) - Sniffers ====
+
+==== Week 7 (3/9) -  System Hacking ====
+
+==== Week 9 (3/30) - Midterm Excellence ====
+
+==== Week 10 (4/6) - Pentesting Web Applications ====
+Ah yes! Once of my favorite topics in Ethical Hacking. This week we will be exploring the vast world of the Web and its technologies. Client side and server side technologies galore. We will look at some of the vulnerabilities as explained in the OWASP Top 10, which is a great resource if you are interested in web development and programming. There are many tools at our disposal to aid in finding those vulns and exploiting them. Let's hack some web apps.

@@ -6,11 +6,13 @@ Creation-Date: 2020-04-06T06:39:33-07:00
 
 
 ==== Lectures ====
-	[>] [[https://drive.google.com/open?id=1wjuNRyWuNnbNZF03R1vgHJtdB7xDeGcU|System Hacking - Web Applications]]
-	[>] N/A
-	Ref: [[https://drive.google.com/file/d/1FTEaFaxKha91PcIDUqw3WVBzAEXTrABr/view?usp=sharing|The Web Application Hacker's Handbook]]
-	Ref: [[https://portswigger.net/web-security|PortSwigger Web Security Academy]]
-	Ref: [[https://pentesterlab.com/exercises/from_sqli_to_shell/course|PentesterLab - From SQLi to Shell]]
+	[>] Slides: [[https://drive.google.com/open?id=1wjuNRyWuNnbNZF03R1vgHJtdB7xDeGcU|System Hacking - Web Applications]]
+	[>] Video: [[https://drive.google.com/file/d/1q4ePtdofcEwiilrFzKMzZ-OIGh8VbqmP/view?usp=sharing|Web Application Pentesting - Part 1]]
+
+==== References ====
+	[[https://drive.google.com/file/d/1FTEaFaxKha91PcIDUqw3WVBzAEXTrABr/view?usp=sharing|The Web Application Hacker's Handbook]]
+	[[https://portswigger.net/web-security|PortSwigger Web Security Academy]]
+	[[https://pentesterlab.com/exercises/from_sqli_to_shell/course|PentesterLab - From SQLi to Shell]]
 
 
 ==== Assignments/Labs ====
