@@ -226,6 +226,7 @@ cewl http://<your target site> --depth 5 --write <sitename>.txt
 
 
 ==== Exploitation ====
-	The goal of exploitation is to take the items you found in the discovery phase and prove that a vulnerability exists. Depending on your scope of you engagement, this could be a quick PoC, or the first step to see how far down into the weeds you end up.
-	Did you find anything?
+	The goal of exploitation is to take the items you found in the discovery phase and prove that a vulnerability exists. Depending on the scope of your engagement, this could be a quick Proof of Concept (PoC), or the first step to see how far down into the weeds you go.
+	
+	Did you find anything interesting?
 
