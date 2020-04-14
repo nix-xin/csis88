@@ -8,6 +8,7 @@ Creation-Date: 2020-04-06T06:39:33-07:00
 ==== Lectures ====
 	[>] Slides: [[https://drive.google.com/open?id=1wjuNRyWuNnbNZF03R1vgHJtdB7xDeGcU|System Hacking - Web Applications]]
 	[>] Video: [[https://drive.google.com/file/d/1q4ePtdofcEwiilrFzKMzZ-OIGh8VbqmP/view?usp=sharing|Web Application Pentesting - Part 1]]
+	[>] Video: [[https://cccconfer.zoom.us/rec/play/6MB4deqhqT83HofHtQSDUKR8W460LP6shnUc-fJYmhqyU3NWMwXyNLoVMLMzDmg3xp_j4yAejHjBJG8m?startTime=1586394709000|Web Application Pentesting - OWASP Juice Shop Walkthrough]]
 
 ==== References ====
 	[[https://drive.google.com/file/d/1FTEaFaxKha91PcIDUqw3WVBzAEXTrABr/view?usp=sharing|The Web Application Hacker's Handbook]]
