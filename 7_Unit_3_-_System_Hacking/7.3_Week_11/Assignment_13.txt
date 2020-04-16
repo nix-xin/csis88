@@ -37,13 +37,14 @@ Creation-Date: 2020-04-14T19:37:53-07:00
 	For example, there is a function called arpscan(). Somewhere in the block of code it expects the arp-scan command, that’s where your programming
 	skills come into play.
 
-	| Required Function | Required Command                                                                                                                                                  |
-	|:------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-	| arpscan()         | arp-scan --interface=$interface $range \| egrep -v '(arp-scan\|Interface\|packets\|Polycom)' \| awk '{print $1}' \| $sip \| sed '/^$/d' >$home/data/hosts-arp.txt |
-	| pingSweep()       | nmap -sn -PS -PE --stats-every 10s -iL $location > tmp                                                                                                            |
-	| pingSweep()       | nmap -sn -PS -PE --stats-every 10s $manual > tmp                                                                                                                  |
-	| error()           | Requires some notice to user of invalid choice or entry.                                                                                                          |
-	| showlist()        | Find a command that displays the contents of a file and the path to that file.                                                                                    |
+| Required Function | Required Command                                                                                                                                                                |
+|:------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| arpscan()         | arp-scan --interface=$interface $range \\\| egrep -v '(arp-scan\\\|Interface\\\|packets\\\|Polycom)' \\\| awk '{print $1}' \\\| $sip \\\| sed '/^$/d' >$home/data/hosts-arp.txt |
+| pingSweep()       | nmap -sn -PS -PE --stats-every 10s -iL $location > tmp                                                                                                                          |
+| pingSweep()       | nmap -sn -PS -PE --stats-every 10s $manual > tmp                                                                                                                                |
+| error()           | Requires some notice to user of invalid choice or entry.                                                                                                                        |
+| showlist()        | Find a command that displays the contents of a file and the path to that file.                                                                                                  |
+
 	
 	
 	**When you think you have a full functioning program, rename it to whatever name you like, upload it to Canvas using a .txt extension.**
