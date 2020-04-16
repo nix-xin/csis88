@@ -230,3 +230,7 @@ cewl http://<your target site> --depth 5 --write <sitename>.txt
 	
 	Did you find anything interesting?
 
+	If you complete the OWASP Juice Shop Room, take a screenshot of your progress and upload it to Canvas.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138770

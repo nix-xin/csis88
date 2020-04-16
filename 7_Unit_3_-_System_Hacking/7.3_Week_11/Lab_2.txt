@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-14T19:38:26-07:00
+
+====== Lab 2 ======
+
+===== Python for Beginners - TryHackMe Room =====
+
+==== Overview ====
+	Learn the basics of python in this interactive walkthrough room.
+
+
+==== Objectives ====
+	Throughout this room, we will touch on subjects such as:
+	
+	* Variables
+	* Loops
+	* Functions
+	* Data Structures
+	* Libraries (PIP)
+	* Files
+
+
+==== TODO ====
+
+	**UNDER CONSTRUCTION**
+	
+
+
+
+
+	You're done! Submit your answers to Canvas in any format.
+
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138733
+

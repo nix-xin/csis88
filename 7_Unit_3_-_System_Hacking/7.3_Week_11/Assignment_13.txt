@@ -1,0 +1,52 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-14T19:37:53-07:00
+
+====== Assignment 13 ======
+
+===== Developing a Security Testing Tool - Bash Scanner =====
+
+==== Overview ====
+	Write an interactive Bash script that will allow you scan a local network for active hosts, save the IP addresses to a file, and display them in the terminal window. 
+	Automate simple tasks using the Bash Shell. Pentesting made easy. 
+	
+	Bash is a scripting language that comes with most Linux distributions. It is ideal for automating all of your security needs using the Command Line Interface.
+
+	A great Bash Guide for Beginners can be found here: http://tldp.org/LDP/Bash-Beginners-Guide/html/
+
+
+==== Prerequisites ====
+	Go through this week's slides for a refresher on simple bash syntax or review the Bash Guide link provided above.
+
+
+==== References ====
+	1. Bash Guide for Beginners - http://tldp.org/LDP/Bash-Beginners-Guide/html/
+	2. Bash Colors and Formatting - https://misc.flogisoft.com/bash/tip_colors_and_formatting
+
+
+==== TODO ====
+{{./screenshot_2020-04-14-195352.png}}
+
+	1. Download the [[https://drive.google.com/file/d/1BixQCPoRUudQrI_1GfYDGvdawEG6DqoB/view?usp=sharing|scanner-shell.sh program here]]. This is only a template with all of the functions required.
+	2. Your task is to fill in each function with the appropriate bash syntax to properly execute the program.
+	3. Remember to document your code and test frequently. It will benefit you in the long run, when you need to come back to it and make any changes.
+	
+	I’ve already tested and formed the syntax for the commands that you will need. All you have to do is read the comments in the code and figure 
+	where to place the commands.
+	
+	For example, there is a function called arpscan(). Somewhere in the block of code it expects the arp-scan command, that’s where your programming
+	skills come into play.
+
+	| Required Function | Required Command                                                                                                                                                  |
+	|:------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+	| arpscan()         | arp-scan --interface=$interface $range \| egrep -v '(arp-scan\|Interface\|packets\|Polycom)' \| awk '{print $1}' \| $sip \| sed '/^$/d' >$home/data/hosts-arp.txt |
+	| pingSweep()       | nmap -sn -PS -PE --stats-every 10s -iL $location > tmp                                                                                                            |
+	| pingSweep()       | nmap -sn -PS -PE --stats-every 10s $manual > tmp                                                                                                                  |
+	| error()           | Requires some notice to user of invalid choice or entry.                                                                                                          |
+	| showlist()        | Find a command that displays the contents of a file and the path to that file.                                                                                    |
+	
+	
+	**When you think you have a full functioning program, rename it to whatever name you like, upload it to Canvas using a .txt extension.**
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138729

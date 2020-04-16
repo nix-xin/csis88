@@ -3,5 +3,21 @@ Wiki-Format: zim 0.4
 Creation-Date: 2020-04-06T06:39:45-07:00
 
 ====== 7.3 Week 11 ======
-Created Monday 06 April 2020
+
+==== Lectures ====
+	[>] Slides: [[https://drive.google.com/file/d/194_x5Y3ax3kTy0ytpMh1Yq3HhKPa1ZWG/view?usp=sharing|Programming For Security Professionals]]
+	[>] Video: [[https://cccconfer.zoom.us/rec/play/75ckfuqrrm83GIeSswSDB6IrW9S0equs2iQa_PEEyEzjAXgAOgGgZOZBZLaYScCvShd2VreqZHkdqAvr?continueMode=true&_x_zm_rtaid=XnElUKsUTHCjaZaVJ7ooig.1586895565184.f938c085986eda5f71c9686d6724ed5a&_x_zm_rhtaid=721|Programming For Security Professionals - Part 1]]
+	[>] Video: 
+
+==== References ====
+
+
+
+
+
+==== Assignments/Labs ====
+	[>] Assignment 13 - Deeloping a Security Testng Tool - Bash Scanner 
+	[>] Lab 1 - C For Beginners
+	[>] Lab 2 - Python For Beginners
+
 
