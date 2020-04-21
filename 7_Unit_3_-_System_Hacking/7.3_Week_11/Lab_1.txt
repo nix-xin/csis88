@@ -4,4 +4,26 @@ Creation-Date: 2020-04-14T19:38:08-07:00
 
 ====== Lab 1 ======
 
+===== C Programming for Beginners - TryHackMe Room =====
+
+==== Overview ====
+	Learn the basics of C in this interactive walkthrough room.
+
+
+==== Objectives ====
+
+	Throughout this room, we will touch on subjects such as:
+	
+	* Variables
+	* Loops
+	* Functions
+	* Data Structures
+
+
+==== TODO ====
+
+	**UNDER CONSTRUCTION**
+
+
+	**Submission Link**
 

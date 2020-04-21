@@ -23,13 +23,11 @@ Creation-Date: 2020-04-14T19:38:26-07:00
 
 ==== TODO ====
 
-	**UNDER CONSTRUCTION**
-	
+	1. Login to your TryHackMe account. https://tryhackme.com/
+	2. Navigate to your Rooms dashboard and add a room using the code '**pythonforbeginners**'
+	3. Complete all of the tasks and solve the Decoder Challenge in Task 10.
+	4. As always, reach out if you need assistance. Good Luck and have Fun!
 
-
-
-
-	You're done! Submit your answers to Canvas in any format.
 
 	**Submission Link**
 	https://mpc.instructure.com/courses/12188/assignments/138733
