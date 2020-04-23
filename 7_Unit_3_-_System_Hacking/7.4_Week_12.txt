@@ -10,6 +10,7 @@ Creation-Date: 2020-04-20T17:44:42-07:00
 ==== Resources ====
 	[>] [[https://drive.google.com/file/d/1filHWZnY5g3fjvsRzxZJbdm0qM89ZtEa/view?usp=sharing|Windows 7 x86 VM Ware Image (6 Gb)]]
 	[>] [[https://drive.google.com/file/d/1U8UOwMcgcXZiJL8T5EiMlreQ-ctnHRWK/view?usp=sharing|Smashing the Stack For Fun and Profit]]
+	[>] Video - [[https://www.youtube.com/watch?v=iqwvECQD_io|Stack Buffer Overflows - a primer on smashing the stack]]
 
 ==== Assignments/Labs ====
 	[>] Lab 1 - Windows 7 x86 - Exploiting Vulnserver 

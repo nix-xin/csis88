@@ -3,21 +3,82 @@ Wiki-Format: zim 0.4
 Creation-Date: 2020-04-20T17:45:18-07:00
 
 ====== Lab 1 ======
-Created Monday 20 April 2020
+
 
 ===== Windows 7 x86 - Exploiting Vulnserver =====
 
 ==== Overview ====
-	Learn the basics of Buffer Over Attacks.
+	Learn the basics of Buffer Over Attacks using a Windows 7 x86 VM and the Vulnserver program.
 
 
 ==== Objectives ====
+	Create a malicious payload using msfvenom to perform a buffer overflow attack and get a reverse shell.
 
+
+==== Tools Required ====
+	Ensure that you have the following tools and software correctly installed before you begin this lab.
+	
+	* [[https://drive.google.com/file/d/1filHWZnY5g3fjvsRzxZJbdm0qM89ZtEa/view?usp=sharing|Windows 7 x86 VM Ware Image (6 Gb)]]
+	* Kali Linux - Your Hacking OS
+	* [[http://www.thegreycorner.com/2010/12/introducing-vulnserver.html|Vulnserver]] - a Windows based threaded TCP server application that is designed to be exploited.
+	* [[https://www.immunityinc.com/products/debugger/|Immunity Debugger]] - Binary dissassembler.
+	* [[https://github.com/corelan/mona|Mona Modules]] - This is a plugin for Immunity Debugger.
 
 
 ==== TODO ====
+	**Smashing the Stack**
+	**Information to note:** Vulnserver runs on port 9999 and we will be fuzzing the TRUN command. Remember to use the IP address of your Windows VM. You can find it in a CMD Prompt with the ipconfig command.
+	
+	**Fuzzing**
+		The first step in any buffer overflow attack is to **fuzz** it by sending bytes of data to the vulnerable program. This should allow us to find out where the EIP register is located.
+		
+		1. From Kali, Download the vulnserver-fuzz.py[[https://drive.google.com/file/d/1dnM2rholRIBWgn8YD9qZMrpLtxkw0SUP/view?usp=sharing| script]] and modify the TARGET IP address with the address of your Windows 7 VM. After you modify it, make a copy of this script and give the copy another name. For example, 
+			**cp vulnserver-fuzz.py 1-vulnserver-fuzz.py**
 
-	**UNDER CONSTRUCTION**
+		2. From Windows VM, Start up the Vulnserver program as Administrator and move the CMD prompt off to the side. Now, open Immunity Debugger (as Administrator) You can right-click the shortcut on the Desktop and Run as Administrator for both, Vulnserver and Immunity Debugger.
+			In Immunity Debugger, click on **File **-> **Attach** and select **vulnserver.exe**
+			By default, the program is paused in the debugger. Type the **F9** key to Run it.
+			Finally, switch over to Kali and execute your python fuzzer script and watch it crash in Immunity Debugger. You should get output in your Terminal that looks similar to the screenshot below.
+			
+			{{./screenshot_2020-04-22-192930.png}}
+		
+			Take a look at the output from your fuzzing script. You should see the message, "Fuzzing crashed at 2100 bytes!"
+			Now, take a look at your Immunity Debugger window, specifically the Registers panel. Which characters are in the EIP register?  Those look like A's to me. Well, in hex of course.
+			We successfully overflowed the EIP register!
+		
+	**Find the Offset**
+		At this point, we know that the EIP register should be between 1 and 2100 bytes.  Exactly where is what we will find out and gain control of it.
+		3. Let's add 100 more bytes to our 2100 for a little extra buffer padding. The Offset is just the distance from our where our overflow begins. In Kali, we can use 2 tools to help us find the Offset, **Pattern Create** and **Pattern Offset**.
+			In Kali, Open another terminal window and run the command:
 
+{{{code: lang="sh" linenumbers="False"
+			root@kali:~ /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 2200 
+}}}
 
+		
+				  The -l is for lenght and 2200 is the number of bytes. The command will generate a random string of 2200 bytes, like the screeshot below:
+		
+		{{./screenshot_2020-04-22-195817.png}}
+		
+		4. Now, make a copy of your **1-vulnserver-fuzz.py** script and name it **2-vulnserver-offset.py. **With the editor of your choice, modify your new script by adding your new pattern string to a new offset variable. Also, you can remove the while loop since we dont need to increment the string again. Like the example in the screenshot below.
+
+		{{./screenshot_2020-04-22-201511.png}}
+		
+		5. Save your new program. Switch back to Windows, close all your programs, Immunity Debugger and Vulnserver. Now, restart Vulnserver and restart Immunity Debugger (remember as Administrator for both programs), and unpause it with the **F9 **key. Oh yeah, get used to doing this a few times. Run your python script and observer Immunity Debugger. Specifically, take a look at the EIP register. The value in EIP should be **386F4337. ** Which is part of the Pattern Create string you added to your script. 
+
+		{{./screenshot_2020-04-22-202720.png}}
+		
+		6. Now, let's use **Pattern Offset** to get the actual offset value. In Kali, open another Terminal window and run the command:
+
+{{{code: lang="sh" linenumbers="False"
+		root@kali:~ /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 2200 -q 386F4337
+}}}
+
+		
+		Where -q is our EIP value.
+		
+		{{./screenshot_2020-04-22-203237.png}}
+
+		You got an exact match at 2003 bytes.
+		
 	**Submission Link**
