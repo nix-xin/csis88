@@ -48,7 +48,7 @@ Creation-Date: 2020-04-20T17:45:18-07:00
 		
 	**Find the Offset**
 		At this point, we know that the EIP register should be between 1 and 2100 bytes.  Exactly where is what we will find out and gain control of it.
-		3. Let's add 100 more bytes to our 2100 for a little extra buffer padding. The Offset is just the distance from our where our overflow begins. In Kali, we can use 2 tools to help us find the Offset, **Pattern Create** and **Pattern Offset**.
+		3. Let's add 100 more bytes to our 2100 for a little extra buffer padding. The Offset is the distance from where the overflow begins. In Kali, we can use 2 tools to help us find the Offset, **Pattern Create** and **Pattern Offset**.
 			In Kali, Open another terminal window and run the command:
 
 {{{code: lang="sh" linenumbers="False"
