@@ -24,7 +24,7 @@ Creation-Date: 2020-04-14T19:38:26-07:00
 ==== TODO ====
 
 	1. Login to your TryHackMe account. https://tryhackme.com/
-	2. Navigate to your Rooms dashboard and add a room using the code '**pythonforbeginners**'
+	2. Navigate to your Rooms dashboard and add a room using the code '**pythonpleasework**'
 	3. Complete all of the tasks and solve the Decoder Challenge in Task 10.
 	4. As always, reach out if you need assistance. Good Luck and have Fun!
 
