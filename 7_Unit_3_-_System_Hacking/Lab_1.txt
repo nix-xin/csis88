@@ -79,6 +79,10 @@ Creation-Date: 2020-04-20T17:45:18-07:00
 		
 		{{./screenshot_2020-04-22-203237.png}}
 
-		You got an exact match at 2003 bytes.
+		You got an exact match at 2003 bytes. That's good news becasue you can now try to take control of the EIP register.
 		
+	**Overwriting the EIP**
+		At this point we've located where the overflow crash happens, just after the 2003 bytes. Let's modify our fuzzing script to verify where that EIP register is at. The screen below shows the previous script we used, but slightly modified. Take a look:
+		
+
 	**Submission Link**
