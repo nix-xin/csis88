@@ -5,7 +5,8 @@ Creation-Date: 2020-04-20T17:44:42-07:00
 ====== 7.4 Week 12 ======
 
 ==== Lectures ====
-	[>] Introduction to Buffer Overflow Attacks
+	[>] Slides: Introduction to Buffer Overflow Attacks
+	[>] Video: [[https://cccconfer.zoom.us/rec/play/7JN4fu_7rj43GNeX4QSDC6N7W465L6Ks1SdM_PUPnhvgVSMCZlHzMrRAY7Ftdkx59ZRm5SH2JXz-Nx_7?continueMode=true&_x_zm_rtaid=mbnFKQ7TR_2STzQDlqYrxA.1587807525167.f3e657a0e97c2bd3cd583e7d43e046af&_x_zm_rhtaid=862|Introduction to BoF Attacks]]
 
 ==== Resources ====
 	[>] [[https://drive.google.com/file/d/1filHWZnY5g3fjvsRzxZJbdm0qM89ZtEa/view?usp=sharing|Windows 7 x86 VM Ware Image (6 Gb)]]
