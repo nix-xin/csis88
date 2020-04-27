@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-26T16:53:52-07:00
+
+====== 7.5 Week 13 ======
+
+==== Lectures ====
+	[>] Slides: [[https://drive.google.com/file/d/1fqaGX20kFejFmlxgjDs5YtL0MFOsA4iJ/view?usp=sharing|Denial of Service (DoS)]]
+	[>] Slides: [[https://drive.google.com/file/d/1AKsDv4sT3EZMNi6IPz-LryUMg47EiTlL/view?usp=sharing|Session Hijacking]]
+
+==== Assignments/Labs ====
+	[>] Assignment 14: Web App Pentest Review Questions
+	[>] Lab 1: Performing a Man in the Middle Attack
+

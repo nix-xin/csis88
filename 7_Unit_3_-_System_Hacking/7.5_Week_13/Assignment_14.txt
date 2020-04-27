@@ -1,0 +1,51 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-26T17:23:27-07:00
+
+====== Assignment 14 ======
+
+===== Web App Pentest Review Questions =====
+
+==== Overview ====
+	Some review questions based on what you have learned about Web Application Pentesting.
+	
+==== References ====
+	Week 10 Slides: System Hacking - Web App Pentesting
+	
+==== TODO ====
+	1. Which of the following can be used to create dynamic Web pages? (Choose all that apply)
+		a. ColdFusion
+		b. PHP
+		c. ASP
+		d. MySQL
+	2. Which of the following can be used to connect a Web server to a back-end database server? (Choose all that apply)
+		a. ODBC
+		b. OLE DB
+		c. ADO
+		d. HTML
+	3. What is DAST?
+		a. Dynamic Application Static Testing
+		b. Dynamic Application Server Takeover
+		c. Delivery Application Server Testing
+		d. Dynamic Application Security Testing
+	4. Entering the value OR 1=1 in a Web application that has an "Enter Your PIN" field is most likely an example of which attack?
+		a. SQL Injection
+		b. Code Injection
+		c. Buffer Overflow
+		d. Ethernet flaw
+	5. Name 3 Web Application vulnerabilities from OWASP's Top 10 list that you applied in the OWASP Juice Shop lab?
+	6. Which of the following is used to connect an ASP Web page to an Oracle database? (Choose all that apply)
+		a. ADO
+		b. HTML
+		c. CGA
+		d. OLE DB
+	7. What tags identify PHP as the scripting language?
+		a. <# #>
+		b. <% %>
+		c. <? ?>
+		d. <! /!> DB
+
+	Submit your work in .txt format to Canvas.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138734

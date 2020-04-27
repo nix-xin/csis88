@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-04-26T17:23:42-07:00
+
+====== Lab 1 ======
+
+===== Performing a Man in the Middle Attack =====
+
+==== Overview ====
+	In this exercise, you’ll learn the fundamentals of an MITM attack. This demonstration will help you understand the background processes at work.
+
+
+==== Resources ====
+	**Skills Test:** Use your knowledge of WireShark to read TCP traffic.
+	arpspoof - redirects packets from a target host (or all hosts) on the LAN intended for another host on the LAN by forging ARP replies.
+	wireshark – packet sniffer
+	
+==== TODO ====
+	**UNDER CONSTRUCTION**
