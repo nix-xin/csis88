@@ -6,7 +6,8 @@ Creation-Date: 2020-04-20T17:44:42-07:00
 
 ==== Lectures ====
 	[>] Slides: [[https://drive.google.com/file/d/1pBlStpqxMAbyL5F5JTObf_cm1z3f_Gjc/view?usp=sharing|Introduction to Buffer Overflow Attacks]]
-	[>] Video: [[https://cccconfer.zoom.us/rec/play/7JN4fu_7rj43GNeX4QSDC6N7W465L6Ks1SdM_PUPnhvgVSMCZlHzMrRAY7Ftdkx59ZRm5SH2JXz-Nx_7?continueMode=true&_x_zm_rtaid=mbnFKQ7TR_2STzQDlqYrxA.1587807525167.f3e657a0e97c2bd3cd583e7d43e046af&_x_zm_rhtaid=862|Introduction to BoF Attacks]]
+	[>] Video: [[https://cccconfer.zoom.us/rec/play/7JN4fu_7rj43GNeX4QSDC6N7W465L6Ks1SdM_PUPnhvgVSMCZlHzMrRAY7Ftdkx59ZRm5SH2JXz-Nx_7?continueMode=true&_x_zm_rtaid=mbnFKQ7TR_2STzQDlqYrxA.1587807525167.f3e657a0e97c2bd3cd583e7d43e046af&_x_zm_rhtaid=862|Introduction to BoF Attacks]] (4/20)
+	[>] Video: [[https://cccconfer.zoom.us/rec/play/6cYrcuz5-jI3SNCSsQSDVvBxW466f6us1ygZr_ELzUe1UXkBMQKlM7NDNrAo7zTR8s_827MxjS513O18?continueMode=true&_x_zm_rtaid=p6T17vp4TYiBAzGkeWSakA.1588090050803.9c1ebfa798060a61cc0b5addc91eba4a&_x_zm_rhtaid=551|Exploiting Vulnserver Walkthrough]] (4/27)
 
 ==== Resources ====
 	[>] [[https://drive.google.com/file/d/1filHWZnY5g3fjvsRzxZJbdm0qM89ZtEa/view?usp=sharing|Windows 7 x86 VM Ware Image (6 Gb)]]

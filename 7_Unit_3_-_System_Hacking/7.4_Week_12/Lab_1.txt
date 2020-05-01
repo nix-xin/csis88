@@ -6,6 +6,7 @@ Creation-Date: 2020-04-20T17:45:18-07:00
 
 
 ===== Windows 7 x86 - Exploiting Vulnserver =====
+**15 Point Lab**
 
 ==== Overview ====
 	Learn the basics of Buffer Over Attacks using a Windows 7 x86 VM and the Vulnserver program.
