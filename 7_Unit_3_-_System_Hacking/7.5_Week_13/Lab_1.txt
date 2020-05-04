@@ -7,13 +7,17 @@ Creation-Date: 2020-04-26T17:23:42-07:00
 ===== Performing a Man in the Middle Attack =====
 
 ==== Overview ====
-	In this exercise, you’ll learn the fundamentals of an MITM attack. This demonstration will help you understand the background processes at work.
-
-
-==== Resources ====
-	**Skills Test:** Use your knowledge of WireShark to read TCP traffic.
-	arpspoof - redirects packets from a target host (or all hosts) on the LAN intended for another host on the LAN by forging ARP replies.
-	wireshark – packet sniffer
+	In this lab, you will learn the fundamentals of a MITM attack. This demonstration will help you understand the background processes at work.
 	
+		   **Scenario: **An unsuspecting user connected to a free wifi spot is browsing a web server on a local network. Your goal is to redirect the user's traffic to the web site by 
+	spoofing the arp requests from the user and web server.
+
+
+==== Requirements ====
+	**wireshark** - Use your knowledge of WireShark to read TCP traffic.
+	**arpspoof** - redirects arp packets from a target host (or all hosts) on the LAN intended for another host on the LAN by forging ARP replies.
+	
+	
+
 ==== TODO ====
-	**UNDER CONSTRUCTION**
+
