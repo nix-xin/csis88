@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-04T16:33:23-07:00
+
+====== Assignment 15 ======
+
+===== Indetifying New Computers Viruses and Worms =====
+
+==== Overview ====
+	Examine some current computer virus threats.
+	
+
+==== Description ====
+	As a security professional, you must keep abreast of the many new viruses and worms that might attack networks and computers. If one computer is compromised, all computers in the network could be compromised. Many firewalls dont detect malware attached to an executable program or a macro virus, so security professionals need to train users on the dangers of installing software, including games, screen savers, on a computer.
+	
+
+==== TODO ====
+	1. Open your web browser, navigate to www.us-cert.gov
+	2. On the home page, type CryptoLocker in the search box on the top right, and click the magnifying glass. What OSs are affected by this worm?
+	3. Give a brief description of CryptoLocker and ways to remove or prevent infection from it.
+	4. Next, go to https://www.broadcom.com/support/security-center/attacksignatures
+	5. Review 5 of the most recent viruses or worms displayed on this page.
+	6. Select one of the viruses or worms, and describe its technical details briefly, i.e. ports used, installation location, files created, goals of this malware, etc. Are any solutions for removing the virus or worm available?
+
+	Submit your work to Canvas in .txt format.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138736

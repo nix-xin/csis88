@@ -7,6 +7,7 @@ Creation-Date: 2020-04-26T16:53:52-07:00
 ==== Lectures ====
 	[>] Slides: [[https://drive.google.com/file/d/1fqaGX20kFejFmlxgjDs5YtL0MFOsA4iJ/view?usp=sharing|Denial of Service (DoS)]]
 	[>] Slides: [[https://drive.google.com/file/d/1AKsDv4sT3EZMNi6IPz-LryUMg47EiTlL/view?usp=sharing|Session Hijacking]]
+	[>] Video: [[https://cccconfer.zoom.us/rec/play/tJEpcrj6rj83GIeW4wSDAPArW9W-e_2s0XMf-PpZzka9VXYHY1qhNbAWZeXiqWK0igm1SNK_P8wYj3aK?continueMode=true&_x_zm_rtaid=H3e82KUKTvyrke1qSgPHGQ.1588634489219.ef95c7dd0b9e99b4e5815267fe8c3877&_x_zm_rhtaid=416|Man In The Middle Attacks]]
 
 ==== Assignments/Labs ====
 	[>] Assignment 14: Web App Pentest Review Questions

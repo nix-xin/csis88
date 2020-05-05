@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-04T16:33:36-07:00
+
+====== Lab 1 ======
+
+===== WiFi Hacking 101 - TryHackMe Room =====
+
+==== Overview ====
+	Learn to attack WPA(2) networks! in this interactive walktrough TryHackMe Room.
+
+
+==== Objectives ====
+
+	Use the Aircrack-ng tool suite to capture wireless frames. Capture enough data from an Access Point to perform a dictionary attack for passphrase recovery.
+
+
+==== TODO ====
+
+	1. Login to your account on TryHackMe.com and access the Room **Wifi Hacking 101**. Use the following room code " **wifihacking101** "
+	2. Complete the given tasks and submit your screenshot of Completion to Canvas.
+	3. Use the Canvas Submission Link below to submit your GitHub link.
+
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138740
+

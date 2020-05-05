@@ -5,3 +5,11 @@ Creation-Date: 2020-04-26T17:45:01-07:00
 ====== 8.1 Week 14 ======
 
 
+==== Lectures ====
+	[>] Slides: [[https://drive.google.com/file/d/1sQGHRPuI7PGVOPfPAM8Xq5zCm4ZmQuZ-/view?usp=sharing|Hacking Wireless Networks]]
+	[>] Slides: [[https://drive.google.com/file/d/1cSvMj5VTfhXGvBWsvS6DYwYwfqKxIZPX/view?usp=sharing|Evasion Techniques]]
+
+==== Assignments/Labs ====
+	[>] Assignment 15 - Identifying New Computer Viruses and Worms
+	[>] Lab 1 - WiFi Hacking 101 - TryHackMe Room
+	[>] Lab 2 - Testing Firewall Rules

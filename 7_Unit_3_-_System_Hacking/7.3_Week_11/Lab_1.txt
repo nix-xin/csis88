@@ -22,8 +22,10 @@ Creation-Date: 2020-04-14T19:38:08-07:00
 
 ==== TODO ====
 
-	**UNDER CONSTRUCTION**
-
+	1. Login to your account on TryHackMe.com and access the Room **C Language for Beginners**. Use the following room code " **clanguageforbeginners** "
+	2. Complete the given tasks and submit a link to your GitHub repository hosting your C code.
+	3. Use the Canvas Submission Link below to submit your GitHub link.
 
 	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138731
 
