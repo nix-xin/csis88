@@ -9,6 +9,9 @@ Creation-Date: 2020-04-26T17:45:01-07:00
 	[>] Slides: [[https://drive.google.com/file/d/1sQGHRPuI7PGVOPfPAM8Xq5zCm4ZmQuZ-/view?usp=sharing|Hacking Wireless Networks]]
 	[>] Slides: [[https://drive.google.com/file/d/1cSvMj5VTfhXGvBWsvS6DYwYwfqKxIZPX/view?usp=sharing|Evasion Techniques]]
 
+==== References ====
+	[[https://drive.google.com/file/d/1JnYK1z7jp3aI8ZXuVksZqXow6KkXcRYj/view?usp=sharing|WiFi Security - WEP, WPA, WPA2]]
+	
 ==== Assignments/Labs ====
 	[>] Assignment 15 - Identifying New Computer Viruses and Worms
 	[>] Lab 1 - WiFi Hacking 101 - TryHackMe Room
