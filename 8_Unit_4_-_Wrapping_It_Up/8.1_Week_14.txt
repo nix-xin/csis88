@@ -9,7 +9,7 @@ Creation-Date: 2020-04-26T17:45:01-07:00
 	[>] Slides: [[https://drive.google.com/file/d/1sQGHRPuI7PGVOPfPAM8Xq5zCm4ZmQuZ-/view?usp=sharing|Hacking Wireless Networks]]
 	[>] Slides: [[https://drive.google.com/file/d/1cSvMj5VTfhXGvBWsvS6DYwYwfqKxIZPX/view?usp=sharing|Evasion Techniques]]
 	[>] Video: [[https://cccconfer.zoom.us/rec/play/uscuf-2r_W03EoKU4wSDB_N6W9XsLaus2nAZ-fBfmk-yUCEAOgKnZuFAZLQ4Rhnc0OZv_LfSDrJOc4Bv?startTime=1588641555000|Hacking Wireless Networks Part 1(Zoom)]]
-	[>] Video: Hacking Wireless Networks Part 2 Demo Walkthrough (Zoom)
+	[>] Video: [[https://cccconfer.zoom.us/rec/share/u_VYPr3A-G5IY5GVyHDPR_4PBKTKaaa82nJN-PFfyxuv61tG7hJFenN4xouWUA1u|Hacking Wireless Networks Part 2 Demo Walkthrough (Zoom)]]
 
 ==== References ====
 	[[https://drive.google.com/file/d/1JnYK1z7jp3aI8ZXuVksZqXow6KkXcRYj/view?usp=sharing|WiFi Security - WEP, WPA, WPA2]]
