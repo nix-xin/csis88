@@ -8,10 +8,13 @@ Creation-Date: 2020-04-26T17:45:01-07:00
 ==== Lectures ====
 	[>] Slides: [[https://drive.google.com/file/d/1sQGHRPuI7PGVOPfPAM8Xq5zCm4ZmQuZ-/view?usp=sharing|Hacking Wireless Networks]]
 	[>] Slides: [[https://drive.google.com/file/d/1cSvMj5VTfhXGvBWsvS6DYwYwfqKxIZPX/view?usp=sharing|Evasion Techniques]]
+	[>] Video: [[https://cccconfer.zoom.us/rec/play/uscuf-2r_W03EoKU4wSDB_N6W9XsLaus2nAZ-fBfmk-yUCEAOgKnZuFAZLQ4Rhnc0OZv_LfSDrJOc4Bv?startTime=1588641555000|Hacking Wireless Networks Part 1(Zoom)]]
+	[>] Video: Hacking Wireless Networks Part 2 Demo Walkthrough (Zoom)
 
 ==== References ====
 	[[https://drive.google.com/file/d/1JnYK1z7jp3aI8ZXuVksZqXow6KkXcRYj/view?usp=sharing|WiFi Security - WEP, WPA, WPA2]]
 	
+
 ==== Assignments/Labs ====
 	[>] Assignment 15 - Identifying New Computer Viruses and Worms
 	[>] Lab 1 - WiFi Hacking 101 - TryHackMe Room

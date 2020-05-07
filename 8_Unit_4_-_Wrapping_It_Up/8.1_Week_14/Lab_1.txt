@@ -4,7 +4,7 @@ Creation-Date: 2020-05-04T16:33:36-07:00
 
 ====== Lab 1 ======
 
-===== WiFi Hacking 101 - TryHackMe Room =====
+===== Hacking Wireless Networks - TryHackMe Room =====
 
 ==== Overview ====
 	Learn to attack WPA(2) networks! in this interactive walktrough TryHackMe Room.
@@ -15,9 +15,14 @@ Creation-Date: 2020-05-04T16:33:36-07:00
 	Use the Aircrack-ng tool suite to capture wireless frames. Capture enough data from an Access Point to perform a dictionary attack for passphrase recovery.
 
 
+==== References ====
+	* Aircrack-ng wifi network security assessment tools https://www.aircrack-ng.org/doku.php?id=Main
+	* Wi-Fi security - WEP, WPA, and WPA2 (Whitepaper by Guillaume Lehembre) http://repository.root-me.org/R%C3%A9seau/EN%20-%20Hacking%20wifi.pdf
+
+
 ==== TODO ====
 
-	1. Login to your account on TryHackMe.com and access the Room **Wifi Hacking 101**. Use the following room code " **wifihacking101** "
+	1. Login to your account on TryHackMe.com and access the Room **Hacking Wireless Networks**. Use the following room code " **hackingwirelessnetworks** "
 	2. Complete the given tasks and submit your screenshot of Completion to Canvas.
 	3. Use the Canvas Submission Link below to submit your GitHub link.
 
