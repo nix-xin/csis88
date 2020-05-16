@@ -1,0 +1,30 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-13T20:40:35-07:00
+
+====== Lab 2 ======
+
+===== Evasion Techniques Using pfSense and Firewalker =====
+
+==== Overview ====
+	The type and scope of a security assessment will determine the need for remaining stealthy. You may want to consider whether the network devices that are supposed to protect the network are indeed doing their job. This lab will focus on performing network firewall rule testing to ensure attacker cannot bypass any access rules.
+	
+	
+
+==== Objectives ====
+	* Pentest an organization's firwall
+	* Avoiding an IDS
+
+==== Resources ====
+	1. Download the [[https://drive.google.com/open?id=1svcSCgiQFyzwxGY5Ugjoy-vrOYeu6jdA|pfSense Firewall]] VM. WebConfigurator **User: admin Pass: csis88**
+	2. Download the [[https://drive.google.com/open?id=12gx-9ghM-f-oGo0agtko1Y4tpIYPYjCt|Lubuntu 14.04]] VM. **User: fwalker Pass: csis88**
+	3. Download the [[https://sourceforge.net/projects/metasploitable/|Metasploitable2]] VM. **User: msfadmin Pass: msfadmin**
+
+==== TODO ====
+	**Setting Up Your Lab Environment**
+	A brief overview of your Network Topology. Your goal is to create this topology in your VM environment if possible.
+	
+	{{./screenshot_2020-05-13-205358.png}}
+	
+	
+
