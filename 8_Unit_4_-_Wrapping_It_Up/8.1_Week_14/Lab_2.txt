@@ -36,8 +36,8 @@ Creation-Date: 2020-05-13T20:40:35-07:00
 
 {{./screenshot_2020-05-16-162737.png}}
 
-	3. Click on the Settings Icon. (Little wheel next to the silder)
-	4. Click on the IPv4 Tab and enter IP the information like the image below and then click the Apply button at the top right of the window.
+	3. Click on the Settings Icon. (Little wheel next to the slider)
+	4. Click on the IPv4 Tab and enter the IP address information like the image below and then click the Apply button at the top right of the window.
 
 {{./screenshot_2020-05-16-163112.png}}
 
@@ -50,7 +50,7 @@ root@kali:~ /etc/init.d/networking restart
 }}}
 
 
-	After you run those commands, verify that your new IP settings took.
+	After you run those commands, verify that your new IP settings were applied.
 	
 	**Lubuntu VM Setup**
 	1. Click on your Lubuntu VM Network settings on either, VMWare or VirtualBox and ensure only one virtual interface is available. If not already available, create a Network segment named VLAN2 and select it from the drop down list. (Internal Network in VirtualBox)
@@ -75,8 +75,8 @@ fwalker@hacknet:~$ sudo /etc/init.d/networking restart
 	After you run those commands, verify that your new IP settings took.
 
 	**pfSense Firewall VM Setup**
-	Our firewall VM guest will use two nwtwork adapters, one for the WAN interface and the other for the LAN interface. VLAN1 (WAN) will be treated as untrusted internet traffic, and VLAN2 (LAN) will be Internal local area network traffic.
-	1. Click on your pfSense VM Network Settings and ensure Two Network Interfaces are added to this VM. Since you already created the LAN Segments from the previous 2 VMs, you should already have available VLAN1 and VLAN2 to choose from. 
+	Our firewall VM guest will use two network adapters, one for the WAN interface and the other for the LAN interface. VLAN1 (WAN) will be treated as untrusted internet traffic, and VLAN2 (LAN) will be Internal local area network traffic.
+	1. Click on your pfSense VM Network Settings and ensure two Network Interfaces are added to this VM. Since you already created the LAN Segments from the previous 2 VMs, you should already have available VLAN1 and VLAN2 to choose from. 
 	2. For Network Interface 1, select VLAN1 and for Network Interface 2, select VLAN2.
 	3. Start up your pfSense VM and verify the 2 Interfaces in the main menu, similar to the image below. 
 
@@ -123,10 +123,10 @@ msfadmin@metasploitable:~$ sudo /etc/init.d/networking restart
 	5. Verify that your new IP configuration was applied. Type ifconfig and press Enter. You should see your new static IP address.
 	
 	**pfSense Firewall Configuration**
-	Now that we have our Virtual Network configured let's add some firwall rules to test. For these next steps we will use pfSense's intuitive Web based User Interface.
+	Now that we have our Virtual Network configured let's add some firewall rules to test. For these next steps we will use pfSense's intuitive Web based User Interface.
 	1. Switch over to your Lubuntu VM and open an Internet browser. In the URL address bar, type 
 		http://192.168.5.1/
-		Login using the Web console credentials near the dowload link above.
+		Login using the Web console credentials near the download link above.
 	2. To view the current firewall rules select **Firewall -> Rules** from the top Menu. For the purpose of testing, we will add and enable ports 80,443,21, and allow ICMP.
 	3. Click on the Add New Rule button.
 	4. Use the following rule settings to enable ICMP.
@@ -141,6 +141,7 @@ msfadmin@metasploitable:~$ sudo /etc/init.d/networking restart
 		Interface: WAN
 		Protocol: TCP
 		Destination port range: HTTP
+		All other settings: Leave as default.
 	8. Click on the **Save** button at the bottom of the page.
 	9. Click on **Apply Changes** at the top of the page.
 	Keep repeating these steps for the other ports and protocols until your Access rules look similar to the image below.
@@ -186,9 +187,9 @@ msfadmin@metasploitable:~$ sudo /etc/init.d/networking restart
 	
 	Did you get a reply? If so, what TCP flags were returned?
 	
-	2. Run the same command on port 443. What TCP flags were returned? Why were those flags returned.
+	2. Run the same command on port 443. What TCP flags were returned? Why were those flags returned?
 
-	After running all the commands under each task, take screenshot and answer the questions associated with each task. Copy/paste to a document and submit to Canvas.
+	After running all the commands under each task, take screenshot and answer the questions associated with each task. Copy/Paste to a document and submit to Canvas.
 	
 	**Submission Link**
 	https://mpc.instructure.com/courses/12188/assignments/138741
