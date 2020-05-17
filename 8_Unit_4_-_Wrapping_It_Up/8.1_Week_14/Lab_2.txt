@@ -4,7 +4,7 @@ Creation-Date: 2020-05-13T20:40:35-07:00
 
 ====== Lab 2 ======
 
-===== Evasion Techniques Using pfSense and Firewalker =====
+===== Testing Firewall Rules Using pfSense and Firewalker =====
 
 ==== Overview ====
 	The type and scope of a security assessment will determine the need for remaining stealthy. You may want to consider whether the network devices that are supposed to protect the network are indeed doing their job. This lab will focus on performing network firewall rule testing to ensure attacker cannot bypass any access rules.
@@ -22,9 +22,179 @@ Creation-Date: 2020-05-13T20:40:35-07:00
 
 ==== TODO ====
 	**Setting Up Your Lab Environment**
-	A brief overview of your Network Topology. Your goal is to create this topology in your VM environment if possible.
+	
+	**PRE-REQ: **Before proceeding to the follow the steps, ensure you have Downloaded and deployed the VMs provided in the links under the Resources section above. You want to verify that you have sufficient resources on your Host hardware to run all VMs concurrently.
+	
+	A brief overview of your Network Topology. Your goal is to create this topology in your VM environment. 
 	
 	{{./screenshot_2020-05-13-205358.png}}
 	
+	**Kali VM Setup**
+	The idea here, is to create a mini network that will simulate external user traffic on the WAN interface (shown as VLAN1 in the diagram above). Realistically, the WAN interface will have a public routable IP address, but for this lab we can use a Private IP address.
+	1. Click on your Kali VM Network settings on either, VMWare or VirtualBox and ensure only one virtual interface is available. If not already available, create a Network segment named VLAN1 and select it from the drop down list. (Internal Network in VirtualBox)
+	2. Start up your Kali VM and Login. Click on the Network icon in the top right of the Task bar. Click on the Wired Settings option.
+
+{{./screenshot_2020-05-16-162737.png}}
+
+	3. Click on the Settings Icon. (Little wheel next to the silder)
+	4. Click on the IPv4 Tab and enter IP the information like the image below and then click the Apply button at the top right of the window.
+
+{{./screenshot_2020-05-16-163112.png}}
+
+	5. Verify the new IP settings by opening a Terminal window and typing ifconfig. If the settings did not apply, try the following commands.
+
+{{{code: lang="sh" linenumbers="False"
+root@kali:~ ifconfig eth0 down
+root@kali:~ ifconfig eth0 up
+root@kali:~ /etc/init.d/networking restart
+}}}
+
+
+	After you run those commands, verify that your new IP settings took.
 	
+	**Lubuntu VM Setup**
+	1. Click on your Lubuntu VM Network settings on either, VMWare or VirtualBox and ensure only one virtual interface is available. If not already available, create a Network segment named VLAN2 and select it from the drop down list. (Internal Network in VirtualBox)
+	2. Start up your Lubuntu VM and Login. Click on the bottom left Icon of the Taskbar -> Preferences -> Network Connections
+	3. Add or Edit your Wired connection.
+
+{{./screenshot_2020-05-16-170636.png}}
+
+	4. Select the IPv4 Settings Tabs and ensure your IP settings are set similar to the image below. Click on the Save button.
+
+{{./screenshot_2020-05-16-170822.png}}
+
+	5. Verify the new IP settings by opening a Terminal window and typing ifconfig. If the settings did not apply, try the following commands.
+
+{{{code: lang="sh" linenumbers="False"
+fwalker@hacknet:~$ sudo ifconfig eth0 down
+fwalker@hacknet:~$ sudo ifconfig eth0 up
+fwalker@hacknet:~$ sudo /etc/init.d/networking restart
+}}}
+
+
+	After you run those commands, verify that your new IP settings took.
+
+	**pfSense Firewall VM Setup**
+	Our firewall VM guest will use two nwtwork adapters, one for the WAN interface and the other for the LAN interface. VLAN1 (WAN) will be treated as untrusted internet traffic, and VLAN2 (LAN) will be Internal local area network traffic.
+	1. Click on your pfSense VM Network Settings and ensure Two Network Interfaces are added to this VM. Since you already created the LAN Segments from the previous 2 VMs, you should already have available VLAN1 and VLAN2 to choose from. 
+	2. For Network Interface 1, select VLAN1 and for Network Interface 2, select VLAN2.
+	3. Start up your pfSense VM and verify the 2 Interfaces in the main menu, similar to the image below. 
+
+{{./screenshot_2020-05-16-172514.png}}
+
+	4. **WAN IP Configuration: **Select Option 2 from the main menu -> Select Option 1- WAN
+	5. When asked to configure WAN interface via DHCP, type n for no.
+	6. The IP address for the WAN interface should be **172.16.3.1**
+	7. The Subnet bits count should be set to 24. Type 24 and press Enter.
+	8. Press Enter to return to the Main menu.
+	9. **LAN IP Configuration: **Choose Option 2 from the menu -> Select Option 2 - LAN
+	10. When prompted to enter IP address, type **192.168.5.1**
+	11. The Subnet bit count should be set to 24. Type 24 and press Enter.
+	12. When asked to enable DHCP on LAN, type n for no.
+	13. Press Enter to return to the Main menu.
+	14. Select Option 5 - Reboot system
+
+	When your pfSense VM comes back up from rebooting, switch over to both your Kali VM and Lubuntu VM and test network connectivity.
+	From Kali VM, open a terminal and type **ping 172.16.3.1**. Do you see any ICMP echo replies?
+	From Lubuntu VM, open a terminal and type **ping 192.168.5.1**. Do you see any ICMP echo replies?
+	
+	You probably will not see any ICMP echo replies because the Firewall is blocking ICMP by default. It's ok, we will get there.
+	
+	**Metasploitable2 Vm Setup**
+	We can use Metasploitable to act as our "Data Server" as this vulnerable VM has many ports open which we can use to test firewall rules in pfSense.
+	1. Since Metasploitable does not have a GUI, we will have to manually configure the Network interace settings. Start up your Metasploitable VM and login using the credentials near the download link above.
+	2. Using the **Nano **text editor, open the file and make the necessary IP configurations similar to the image below. We are changing from using DHCP to Statically assigning an IP address.
+
+{{{code: lang="sh" linenumbers="False"
+msfadmin@metasploitable:~$ sudo nano /etc/network/interfaces
+}}}
+
+ 
+{{./screenshot_2020-05-16-181709.png}}
+
+	3. Save your file and exit.
+	4. Type the following command to restart network services.
+
+{{{code: lang="sh" linenumbers="False"
+msfadmin@metasploitable:~$ sudo /etc/init.d/networking restart 
+}}}
+
+
+	5. Verify that your new IP configuration was applied. Type ifconfig and press Enter. You should see your new static IP address.
+	
+	**pfSense Firewall Configuration**
+	Now that we have our Virtual Network configured let's add some firwall rules to test. For these next steps we will use pfSense's intuitive Web based User Interface.
+	1. Switch over to your Lubuntu VM and open an Internet browser. In the URL address bar, type 
+		http://192.168.5.1/
+		Login using the Web console credentials near the dowload link above.
+	2. To view the current firewall rules select **Firewall -> Rules** from the top Menu. For the purpose of testing, we will add and enable ports 80,443,21, and allow ICMP.
+	3. Click on the Add New Rule button.
+	4. Use the following rule settings to enable ICMP.
+		Action: Pass
+		Interface: WAN
+		Protocol: ICMP
+		All other settings: Leave as default.
+	5. Click on the **Save** button at the bottom of the page.
+	6. Click on **Apply Changes** at the top of the page.
+	7. Click on the **Add new rule **button. Use the following rule settings to enable HTTP.
+		Action: Pass
+		Interface: WAN
+		Protocol: TCP
+		Destination port range: HTTP
+	8. Click on the **Save** button at the bottom of the page.
+	9. Click on **Apply Changes** at the top of the page.
+	Keep repeating these steps for the other ports and protocols until your Access rules look similar to the image below.
+
+{{./screenshot_2020-05-16-183825.png}}
+
+
+	**Using Firewalk to Test Firewall Rules**
+	
+	**Your lab goal:** After running each command and getting a successful output, take a screenshot and answer each of the questions associated with each task below. Copy/Paste each screenshot with your answers to a word document/PDF and use that to submit to Canvas.
+	
+	Now that we have a few firewall rules enabled in pfSense, let's test them using Firewalk and a few other tools.
+	1. Switch over to your Kali VM and Verify that ICMP is now enabled, try pinging the remote Data Server at 192.168.5.10. **Did you receive any echo replies?**
+	2. First, run an nmap scan to see if there are any open ports. Use the example in the image below. Are there any open ports? Take a look at the pfSense **Status -> System Logs -> Firewall** log. Can you tell what the Nmap scan looks like? Is it "noisy" ? Why does port 443 have closed under STATE?
+
+{{./screenshot_2020-05-16-185012.png}}
+
+	3. Now, use firewalk to individually test an access rule. Use the example firewalk command in the image below to test port 21.
+
+{{./screenshot_2020-05-16-185419.png}}
+
+	Let's break down this firewalk command.
+	-n doesnt use naming lookup so it ignores any DNS lookup.
+	-p uses the TCP protocol.
+	-S port to scan 21.
+	-d destination port
+	<first_ip_address> Kali VM default gateway
+	<second_ip_address> Remote host or target
+	
+	If you received similar output to the image above, you will notice that there are 2 hops over to the remote target and port 21 is indeed allowed. It appears to also be listening on the remote host. Now, try the same command but switch the port to use 443. Was the output similar? If not, what was different?
+	
+	**Using Hping3 to craft packets**
+	We can also use the Hping3 tool to send crafted TCP/UDP packets to be a bit more stealthy when we test our firewall rules. Let send one single TCP SYN packet to the remote target and see if it returns a reply.
+	1. Use the example command in the image below to send one TCP SYN packet to the remote host.
+
+{{./screenshot_2020-05-16-190419.png}}
+
+	Let's breakdown the Hping3 command.
+	-c is for count, in this case send 1 packet
+	-S is for TCP SYN packet
+	-p if for port 80
+	<target_ip_address>
+	
+	Did you get a reply? If so, what TCP flags were returned?
+	
+	2. Run the same command on port 443. What TCP flags were returned? Why were those flags returned.
+
+	After running all the commands under each task, take screenshot and answer the questions associated with each task. Copy/paste to a document and submit to Canvas.
+	
+	**Submission Link**
+	https://mpc.instructure.com/courses/12188/assignments/138741
+
+
+
+
+
 
