@@ -27,13 +27,13 @@ Make sure to Login to Zoom at 5:50pm for a pre-exam speech from the instructor.
 	You’ve been hired by HNI to conduct an assessment of their INTERNAL network before the bad guys find any vulnerabilities that will take the organization down.
 	You are being challenged on the many concepts of Cyber Security and Penetration Testing you learned throughout the semester. The assessment will be in the Capture the Flag style that you are familiar with.
 	
-		   **From Your Kali Linux VM**
-	1. Login to TryHackMe.com and add the Room **CSIS88Sp20 FINAL CTF **using the Room code "**csis88sp20finalctf**"
-	2. Connect to the TryHackMe VPN network.
-	3. In Task 1, deploy the VM associated with this Room.
-	4. Open a Web Browser and navigate to https://ctf.offswitchsecurity.com/
-	5. Login is using the user/email you registered.
-	6. Complete the challenges and Have Fun. Good Luck!!
+	**From Your Kali Linux VM**
+		1. Login to TryHackMe.com and add the Room **CSIS88Sp20 FINAL CTF **using the Room code "**csis88sp20finalctf**"
+		2. Connect to the TryHackMe VPN network.
+		3. In Task 1, deploy the VM associated with this Room.
+		4. Open a Web Browser and navigate to https://ctf.offswitchsecurity.com/
+		5. Login using the user/email you registered. Make sure you use your MPC email.
+		6. Complete the challenges and Have Fun. Good Luck!!
 
 	
 	Time to Complete: 2 hours 30 Minutes
