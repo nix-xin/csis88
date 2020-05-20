@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2020-05-19T21:27:27-07:00
+
+====== CTF - Final Exam ======
+
+Final CTF Starts on Wednesday May 20 @ 5:50pm through 8:30pm
+Make sure to Login to Zoom at 5:50pm for a pre-exam speech from the instructor. 
+
+==== Overview ====
+	This document will provide you with the guidance required to complete your final Capture The Flag Challenge scheduled for Wednesday May 20 at 6:00pm. Remember, time is of the essence and you must not waste any single minute.
+	
+	Over the course of the semester you have acquired the necessary skills to perform a basic penetration test of a simple network of computers. Your Kali Linux desktop should provide you with the tools and utilities needed to assess the systems attached to a basic LAN.
+	
+	**Review Material**
+	Here is a link to the [[https://drive.google.com/open?id=1AxKx8iDP1vefN5iW1t8nB6MlZ_vRQWkl|Final CTF Review - Concepts covered]]  
+	OpenSource Intelligence, Cryptography, Log Analysis, Enumeration and Exploitation, Network Analysis, Web Apps, Password Cracking.
+	
+	Here is a link to the [[https://cccconfer.zoom.us/rec/share/4NZcaJjZyGZORs-R4RnPVowkLLzbeaa8h3Afr_RfmRvf1KztGVve75job3LMHyZ0|Zoom Video]] covering a brief review from student questions.
+	
+	The main focus of the Final CTF will be on conducting an assessment of the underground black market site
+	Hackable Networks Inc.
+	
+
+==== TODO ====
+	**Scenario**
+	You’ve been hired by HNI to conduct an assessment of their INTERNAL network before the bad guys find any vulnerabilities that will take the organization down.
+	You are being challenged on the many concepts of Cyber Security and Penetration Testing you learned throughout the semester. The assessment will be in the Capture the Flag style that you are familiar with.
+	
+		   **From Your Kali Linux VM**
+	1. Login to TryHackMe.com and add the Room **CSIS88Sp20 FINAL CTF **using the Room code "**csis88sp20finalctf**"
+	2. Connect to the TryHackMe VPN network.
+	3. In Task 1, deploy the VM associated with this Room.
+	4. Open a Web Browser and navigate to https://ctf.offswitchsecurity.com/
+	5. Login is using the user/email you registered.
+	6. Complete the challenges and Have Fun. Good Luck!!
+
+	
+	Time to Complete: 2 hours 30 Minutes
+	Challenges: 16
+	Total Points: 107
+
